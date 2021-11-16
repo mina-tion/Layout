@@ -18,12 +18,9 @@ const SectionTitle: React.FC<Props> = observer(({title}) => {
         <div className={styles.text}>
                 {title}
         </div>
-
         <div className={styles.arrows}>
           <Arrows />
         </div>
-      
-
     </div>
   )
 })

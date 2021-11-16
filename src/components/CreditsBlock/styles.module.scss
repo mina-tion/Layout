@@ -2,10 +2,14 @@
 
 .creditsBlock { 
     @include flex(flex-start, space-between);
+    position: relative;
     flex-wrap: wrap;
     width: 100%;
-    height: fit-content;
     padding: 42px 60px 48px 60px;
+    @include desktop{height: calc(468px + (226 - 468) * ((100vw - 320px) / (1440 - 320)));}
+    @include desktop{padding-left: calc(16px + (60 - 16) * ((100vw - 320px) / (1440 - 320)));
+                    padding-right: calc(16px + (60 - 16) * ((100vw - 320px) / (1440 - 320)));}
+    @include phones { align-content: flex-start}
     background-color: var(--footerColor1);
     .brend { 
         @include flex(center);
@@ -15,35 +19,65 @@
             .blue { 
                 color: $brandColor;
             }
+         }
+    }   
+
+    .mobButtonContainer { 
+        display: none;
+        width: 250px;
+        @include desktop { width: calc(157px + (250 - 157) * ((100vw - 375px) / (480 - 375)));}
+
+        @include phones { 
+            display: block;
+            margin-top: 50px;
         }
     }
+
+    @media (max-width: 1048px) {
+        .brend { 
+            @include flex-direction(column);
+            @include flex(flex-start);
+            .brendName { 
+                margin-bottom: 32px;
+            }
+        }   
+    }
+
+
 
     .container { 
         @include flex();
         @include flex-direction(column);
-      
+        @include phones {order: 2; height: 100px; margin-top: 55px;}
+
+        height: fit-content;
 
         .title{ 
             @include text-style(24px, 400, $color: var(--titleColor));
             margin-bottom: 24px;
         }
-
         
         .list { 
             @include flex(space-between, space-between);
-            @include flex-direction(column);
-            height: 50px;
+            @include flex-direction(row);
+            height: 64px;
             flex-wrap: wrap;
-            
-            .listItem { 
-            width: 18%;
-                @include text-style(18px, 400, $color:rgba(0, 0, 0));
-                opacity: 0.6;
-                margin-right: 100px;
+            @include laptop {@include flex; @include flex-direction(column);  flex-wrap: nowrap; }
+           
+            .column { 
+                //margin-right: 100px;
+                @include desktop{margin-right: calc(40px + (100 - 40) * ((100vw - 320px) / (1440 - 320)));}
+
+                .listItem { 
+                    @include text-style(18px, 400, $color:var(--textColor2));
+                    opacity: 0.6;
+                }
             }
+           
         }
-    
     }
+
+
 
     .iconContainer { 
         @include flex();
@@ -60,9 +94,25 @@
             background: rgba(60, 125, 255, 0.2);
             border-radius: 50%;
             @include flex(center, center);
-          /*   &:last-child { 
-                background-color: aqua ;
-            } */
+
        }
+
+       @include phones { 
+            order: 2;
+            position: absolute;
+            right: 25px;
+            bottom: 12%;
+
+        }
+
+        .deskButtonContainer { 
+            @include phones { 
+                 display: none;
+             }
+        }
+ 
+       
     }
 }
+
+

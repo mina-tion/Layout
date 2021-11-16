@@ -3,7 +3,9 @@
 .sectionTitle { 
     @include flex(flex-start, space-between);
     margin-bottom: 28px;
-    //@include desktop{font-size: calc(44px + (112 - 44)* ((100vw - 320px) / (1440 - 320)));}
+    margin-left: 1px;
+    @include desktop{margin-left: calc(16px + (1 - 16)* ((100vw - 320px) / (1440 - 320)));
+                    margin-bottom: calc(16px + (28 - 16)* ((100vw - 320px) / (1440 - 320)))}
 
     .text { 
         @include text-style(32px, 700, 40px, $letter-spacing:-1px, $color: var(--textColor2));

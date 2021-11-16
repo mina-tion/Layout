@@ -2,7 +2,7 @@ import React from 'react'
 import { observer } from 'mobx-react'
 
 // style
-//import styles from './styles.module.scss'
+import styles from './styles.module.scss'
 
 import { Carousel } from 'antd';
 
@@ -14,13 +14,12 @@ const CardCarousel: React.FC<Props> = observer(({img}) => {
 
   const imgList = img.map((image, index)=>{
     return (
-      <div key={index}>
-        <img src={image} alt=""/>
-      </div>)
+        <img key={index} src={image} alt="" className={styles.img}/>
+        )
   })
 
   return (
-        <Carousel afterChange={()=>{}}>
+        <Carousel afterChange={()=>{}} className={styles.imageHolder}>
          { imgList }
         </Carousel>
   )

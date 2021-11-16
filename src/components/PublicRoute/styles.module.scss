@@ -47,14 +47,9 @@
     .productBlock {
       background: var(--contentBackground); 
       padding: 36px 60px 0 60px;
-      @include desktop{padding: calc(16px + (60 - 16)* ((100vw - 320px) / (1440 - 320)));}
+      @include desktop{padding: calc(1px + (60 - 0)* ((100vw - 320px) / (1440 - 320)));}
     }
-    
-    @media (max-width: 1440px) {
-      .product_block { 
-        padding: calc(16px + (60 - 16)* ((100vw - 320px) / (1440 - 320)));
-      }
-    }
+
       
   }
 

@@ -3,7 +3,7 @@ import React from 'react'
 import { observer } from 'mobx-react'
 // style
 import styles from './styles.module.scss'
-import Category from './../CategoryCard'
+import CategoryCard from './../CategoryCard'
 
 //images
 import women from './../../sources/images/women.jpg'
@@ -14,10 +14,18 @@ const CategoryList: React.FC = observer(() => {
 
   return (
        <div className={styles.list}>
-          <Category img={women} name='Women' />
-          <div className={styles.column}>
-            <Category img={kids} name='Kids' />
-            <Category img={men} name='Men' /> 
+         <div className={styles.rowImg}>
+           <CategoryCard img={women} name='Women' />
+         </div>
+          
+          <div className={styles.columnImgs}>
+            <div className={styles.columnImg}>
+              <CategoryCard img={kids} name='Kids' />
+            </div>
+            <div className={styles.columnImg}>
+              <CategoryCard img={men} name='Men' />
+            </div>
+            
           </div>        
       </div>
 

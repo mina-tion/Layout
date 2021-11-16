@@ -10,10 +10,10 @@ import linkedin from './../../sources/images/linkedin.svg'
 import facebook from './../../sources/images/facebook.svg'
 import instagram from './../../sources/images/instagram.svg'
 
-import classnames from 'classnames'
+/* import classnames from 'classnames' */
 
 const categoriesList = ['Popular', 'Kids', 'Sale', 'New', 'Men', 'Women']
-const aboutList = ['Contacts', 'Support', 'Contacts', 'Support']
+const aboutList = ['Contacts', 'Support']
 const iconList = [linkedin, facebook, instagram]
 
 
@@ -27,18 +27,27 @@ const CreditsBlock: React.FC = observer(() => {
         </div>
         <ThemeSwitcher />
       </div>
+      <div className={styles.mobButtonContainer}>
+          <Button />
+        </div>
 
       <div className={styles.container}>
         <div className={styles.title}>
           Categories
         </div>
-
         <ul className={styles.list}>
-          {
-            categoriesList.map((item, index) => (
-              <li key={index}><a href="" className={styles.listItem}>{item}</a></li>
-            ))
-          }
+          <div className={styles.column}>
+            <li key={0}><a href="" className={styles.listItem}>{'Popular'}</a></li>
+            <li key={1}><a href="" className={styles.listItem}>{'Kids'}</a></li>
+          </div>
+          <div className={styles.column}>
+            <li key={2}><a href="" className={styles.listItem}>{'Sale'}</a></li>
+            <li key={3}><a href="" className={styles.listItem}>{'New'}</a></li>
+          </div>
+          <div className={styles.column}>
+            <li key={4}><a href="" className={styles.listItem}>{'Men'}</a></li>
+            <li key={5}><a href="" className={styles.listItem}>{'Women'}</a></li>
+          </div>
         </ul>
       </div>
 
@@ -46,15 +55,13 @@ const CreditsBlock: React.FC = observer(() => {
         <div className={styles.title}>
           About Us
         </div>
-      
+
           <ul className={styles.list}>
-            {
-              aboutList.map((item, index) => (
-                <li key={index}><a href="" className={styles.listItem}>{item}</a></li>
-              ))
-            }
+            <div className={styles.column}>
+              <li key={0}><a href="" className={styles.listItem}>{'Contacts'}</a></li>
+              <li key={1}><a href="" className={styles.listItem}>{'Support'}</a></li>
+            </div>
           </ul>
-        
       </div>
 
       <div className={styles.iconContainer}>
@@ -65,13 +72,13 @@ const CreditsBlock: React.FC = observer(() => {
             ))
           }
         </ul>
-        
-        <Button />
+
+        <div className={styles.deskButtonContainer}>
+          <Button />
+        </div>
+
       </div>
-
-
-
-      
+  
     </div>
 
   )

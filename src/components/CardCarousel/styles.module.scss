@@ -1,0 +1,12 @@
+@import './../../sources/styles/mixins.scss';
+
+
+.imageHolder {
+    height: 100%;
+    .img {
+        //object-fit: cover;
+        @include desktop{height: calc(333px + (475 - 333) * ((100vw - 320px)/(1200 - 320)));} 
+        @include desktop{width: calc(300px + (427 - 300) * ((100vw - 320px)/(1200 - 320)));} 
+     }
+}
+

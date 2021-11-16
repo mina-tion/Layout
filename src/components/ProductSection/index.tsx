@@ -38,7 +38,6 @@ const ProductSection: React.FC<Props> = observer(({sectionName}) => {
     <div className={styles.productSection}>
       <SectionTitle title={sectionName} />
       {list}
-
     </div>
   )
 })

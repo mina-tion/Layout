@@ -10,18 +10,22 @@ interface Props {
   name: string,
 }
 
-const DontMissCard: React.FC<Props> = observer(({img,  name}) => {
+const CategoryCard: React.FC<Props> = observer(({img,  name}) => {
 
   return (
-    <div className={styles.category}>
+    <div className={styles.card}>
       <img src={img} alt="" className={styles.img}/>
       <div className={styles.info}>
         <div className={styles.name}> {name} </div>
-        <Button />
+
+        <div className={styles.buttonContainer}>
+          <Button />
+        </div>
+       
       </div>
     </div>
 
   )
 })
 
-export default DontMissCard
+export default CategoryCard

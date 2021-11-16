@@ -1,10 +1,24 @@
 @import './../../sources/styles/mixins.scss';
 
-.category { 
+.card { 
     margin: 0 21px 20px 0;
-    @include desktop{margin-right: calc(10px + (10 - 21) * ((100vw - 320px)/(1200 - 320)));
-                     margin-bottom: calc(10px + (10 - 20) * ((100vw - 320px)/(1200 - 320)));};
+    @include desktop{ margin-right: calc(1px + (21 - 1) * ((100vw - 567px)/(1200 - 567)));
+                      margin-bottom: calc(1px + (20 - 1) * ((100vw - 567px)/(1200 - 567))); }; 
+   
     position: relative;
+    height: 100%; 
+
+    .img{ 
+        object-position: center;
+        object-fit: cover;
+        //height: 100%;
+        margin-right: calc(1px + (21 - 1) * ((100vw - 567px)/(1200 - 567)));
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: 100%; 
+        @include tablets{width: 100%; }
+    }
 
     .info{
         @include position-absolute($bottom: 24px, $left: 24px);
@@ -14,14 +28,7 @@
         }
     }
 
-    .img{ 
-        object-position: center;
-       // object-fit: cover;
-       // height: 100%;
-
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        //width: 100%;
+    .buttonContainer { 
+        width: 93px;
     }
 }

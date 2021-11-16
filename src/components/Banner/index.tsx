@@ -23,9 +23,12 @@ const Banner: React.FC<Props> = observer(({img, caption, description}) => {
         <div  className={styles.content}>
           <div className={styles.title}> {caption[0]} <br /> {caption[1]}</div>
           <div className={styles.text}> {description} </div>
-          <Button />
+
+          <div className={styles.buttonContainer}>
+           <Button />
+          </div>
+          
         </div>
-       
       </div>
   )
 })
