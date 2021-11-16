@@ -1,0 +1,25 @@
+@import './../../sources/styles/mixins.scss';
+
+.sectionTitle { 
+    @include flex(flex-start, space-between);
+    margin-bottom: 28px;
+    //@include desktop{font-size: calc(44px + (112 - 44)* ((100vw - 320px) / (1440 - 320)));}
+
+    .text { 
+        @include text-style(32px, 700, 40px, $letter-spacing:-1px, $color: var(--textColor2));
+        &::after{
+            display: none;
+            content: '>';
+            @include tablets {display: inline;}
+        }
+    }
+
+    .arrows { 
+        @include tablets {display: none;}
+
+    }
+
+}
+
+
+

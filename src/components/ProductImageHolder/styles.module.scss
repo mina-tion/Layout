@@ -1,0 +1,27 @@
+@import './../../sources/styles/mixins.scss';
+
+.imageHolder { 
+    @include width-height(427px, 475px);
+    position: relative;
+
+    .sale { 
+        @include flex(center, center);
+        @include position-absolute($bottom:12px, $left: 10px);
+        @include width-height(66px, 32px);
+        background: #FE006B;
+        border-radius: 8px;
+
+        .saleText { 
+            @include text-style(18px, 700, $color: #FFF);
+            @include flex(flex-end);
+        }
+    }   
+    
+    .like { 
+        @include position-absolute($top: 19px, $right: 16.3px);
+    }
+
+}
+
+
+

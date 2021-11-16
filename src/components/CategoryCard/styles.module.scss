@@ -1,0 +1,27 @@
+@import './../../sources/styles/mixins.scss';
+
+.category { 
+    margin: 0 21px 20px 0;
+    @include desktop{margin-right: calc(10px + (10 - 21) * ((100vw - 320px)/(1200 - 320)));
+                     margin-bottom: calc(10px + (10 - 20) * ((100vw - 320px)/(1200 - 320)));};
+    position: relative;
+
+    .info{
+        @include position-absolute($bottom: 24px, $left: 24px);
+        .name { 
+            margin-bottom: 12px;
+            @include text-style(64px, 700, 64px, $color: #FFFFFF, $letter-spacing: -5px);
+        }
+    }
+
+    .img{ 
+        object-position: center;
+       // object-fit: cover;
+       // height: 100%;
+
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        //width: 100%;
+    }
+}

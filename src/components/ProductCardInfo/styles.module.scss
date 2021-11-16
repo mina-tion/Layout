@@ -1,0 +1,32 @@
+@import './../../sources/styles/mixins.scss';
+
+.cardInfoBlock { 
+    margin-top: 20px;
+    @include flex(flex-start, space-between);
+
+    .nameText { 
+        @include text-style(24px, $color: var(--productTextColor));
+        @include flex(flex-end);
+    }
+    
+    .descText { 
+        @include text-style(18px, $color: var(--productTextColor));
+        opacity: 0.6;
+    }
+}
+
+
+.priceBlock {
+    .priceText { 
+        @include text-style(24px, 700, $color: var(--productTextColor));
+        @include flex(flex-end);
+    }
+
+    .oldPriceText { 
+        text-decoration: line-through;
+        @include text-style(18px, $color: var(--productTextColor));
+        @include flex(flex-end); 
+        opacity: 0.6;
+    }
+}
+

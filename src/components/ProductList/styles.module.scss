@@ -1,0 +1,6 @@
+@import './../../sources/styles/mixins.scss';
+
+.list { 
+    @include flex;
+    overflow-x: scroll;
+}

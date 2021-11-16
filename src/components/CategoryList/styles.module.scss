@@ -1,0 +1,18 @@
+@import './../../sources/styles/mixins.scss';
+
+
+.list { 
+    
+    @include flex();
+    @include laptop{@include flex-direction(column); flex-wrap: wrap;}
+    overflow-x: scroll; 
+    overflow-y: hidden; 
+    width: fit-content;
+
+    .column { 
+   
+        @include laptop{@include flex(); @include flex-direction(row); }//flex-wrap: wrap;}
+    }
+}
+
+

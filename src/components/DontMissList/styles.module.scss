@@ -1,0 +1,14 @@
+@import './../../sources/styles/mixins.scss';
+
+
+.list { 
+    @include flex;
+    overflow-x: scroll;
+
+    @include laptop{@include flex-direction(column); flex-wrap: wrap;}
+    overflow-y: hidden; 
+    width: fit-content;
+
+}
+
+

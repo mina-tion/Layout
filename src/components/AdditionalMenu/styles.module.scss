@@ -1,0 +1,22 @@
+@import './../../sources/styles/mixins.scss';
+
+.menu { 
+    @include flex(center, space-between);
+    flex-wrap: nowrap;
+    .fullMenu { 
+        @include laptop{display: none;  }
+      /*   flex-wrap: nowrap; */
+    }
+    .img {
+        margin: 0px 16px 0px 16px;
+        filter: var(--invert);
+    }
+
+    .mobMenu {
+        
+        @include width-height(30px, 30px);
+        display: none; 
+        @include laptop{display: block; }
+        filter: var(--invert);
+    }
+}

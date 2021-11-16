@@ -1,0 +1,45 @@
+@import './../../sources/styles/mixins.scss';
+
+.themeSwitcher { 
+    @include flex(center, space-around);
+    flex-wrap: nowrap;
+    @include width-height(82px, 40px);
+    min-width: 82px;
+    background: var(--themeSwitcherColor);
+    border-radius: 90px;
+    padding: 6px 0px 6px 2px;
+    position: relative;
+    z-index: 0;
+
+    .circle { 
+        @include position-absolute($top: 10%, $bottom: 10%);
+        @include width-height(32px, 32px);
+        right: 6px; 
+        border-radius: 50%;
+        background: #FFFFFF;
+        z-index: 1;
+    }
+
+    .left { 
+        left: 5px; 
+    }
+
+    .right { 
+        right: 5px; 
+    }
+
+    .sunButton { 
+        @include width-height(26px, 26px);
+        z-index: 2;
+        cursor: pointer;
+        filter: var(--invert);
+    }
+    
+    .moonButton { 
+        @include width-height(23px, 23px);
+        z-index: 2;
+        cursor: pointer;
+    }
+    
+}
+
