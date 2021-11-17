@@ -21,7 +21,15 @@ const AdditionalMenu: React.FC = () => {
     searchBox = (
     <div className={styles.searchContainer}>
       <div className={styles.searchBox}>
-        <input type="text" className={styles.inputLine}/>
+        <div className={styles.inputFieldContainer}>
+          <input type="text" className={styles.inputField}/>
+          <img src={search} alt="" className={classNames(styles.icon, styles.search)}/>
+        </div>
+
+        <div className={styles.searchHistoryContainer}> 
+          <h2 className={styles.title}><b>Resent Search</b></h2>
+
+        </div>
       </div>
       <div onClick={()=>setShowSearch(!showSearch)}> 
         <img src={close} alt="" className={classNames(styles.icon, styles.close)}/>
@@ -34,7 +42,7 @@ const AdditionalMenu: React.FC = () => {
   <div className={styles.menu}>
     {searchBox}
     <div className={styles.imageContainer} onClick={()=>setShowSearch(!showSearch)}>
-      <img src={search} alt="" className={styles.img}/>
+      <img src={search} alt="" className={styles.icon}/>
     </div>
 
     <div className={styles.fullMenu}> 
@@ -45,8 +53,6 @@ const AdditionalMenu: React.FC = () => {
     </div>
     <img src={menu} alt="" className={styles.mobMenu}/>
   </div>  
-
-
   )
 }
 
