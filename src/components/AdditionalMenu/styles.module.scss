@@ -43,7 +43,7 @@
                 border: 1px;
                 background: rgba(0, 0, 0, 0.06);
                 width: 100%;
-                
+                padding-left: 50px;
                 &:focus { 
                     outline: none;
                 }
@@ -60,6 +60,13 @@
             margin-top: 30px;
             .title {
                 @include text-style(18px, $color: #1E1E22);
+            }
+
+            .historyItem { 
+                
+                font-weight: normal;
+                @include text-style(18px);
+                opacity: 0.6;
             }
         }
         

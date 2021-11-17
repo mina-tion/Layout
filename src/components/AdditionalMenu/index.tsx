@@ -28,6 +28,8 @@ const AdditionalMenu: React.FC = () => {
 
         <div className={styles.searchHistoryContainer}> 
           <h2 className={styles.title}><b>Resent Search</b></h2>
+          <h3 className={styles.historyItem}>White Thirt</h3>
+          <h3 className={styles.historyItem}>Overhit with belt</h3>
 
         </div>
       </div>
