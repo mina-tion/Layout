@@ -25,6 +25,7 @@
         background-color: white;
         width: 100%;
         padding-top: 24px;
+
         .close { 
             position: absolute;
             right: 37px;
@@ -63,11 +64,21 @@
             }
 
             .historyItem { 
-                
-                font-weight: normal;
-                @include text-style(18px);
+                @include flex(center, space-between);
                 opacity: 0.6;
+                
+                .text { 
+                    font-weight: normal;
+                    @include text-style(18px);
+                }
+                .deleteButton { 
+                    width: 9px;
+                    height: 9px;
+                }
+
+
             }
+            
         }
         
     }
