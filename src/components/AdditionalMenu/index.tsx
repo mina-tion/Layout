@@ -2,7 +2,7 @@ import React from 'react'
 import {useState} from 'react'
 // style
 import styles from './styles.module.scss'
-
+import classNames from 'classnames';
 
 import search from './../../sources/images/search.svg';
 import fav from './../../sources/images/fav.svg'
@@ -10,47 +10,41 @@ import basket from './../../sources/images/basket.svg'
 import avatar from './../../sources/images/avatar.svg'
 import other from './../../sources/images/other.svg'
 import menu from './../../sources/images/menu.svg'
+import close from './../../sources/images/close.svg'
 
 const AdditionalMenu: React.FC = () => {
 
   const [showSearch, setShowSearch] =  useState(false);
+
+  let searchBox = null; 
+  if(showSearch) {
+    searchBox = (
+    <div className={styles.searchContainer}>
+      <div className={styles.searchBox}>
+        <input type="text" className={styles.inputLine}/>
+      </div>
+      <div onClick={()=>setShowSearch(!showSearch)}> 
+        <img src={close} alt="" className={classNames(styles.icon, styles.close)}/>
+      </div> 
+    </div>)
+  }
   
-
-
   return (
-    
-  <div className={styles.menu}>
-    
-    {
-/*       showSearch : ( <div className={styles.searchWrapper}>
-        <div className={styles.searchContainer}>
-          <input type="text" />
-        </div>
-      </div> )
-      ? */
-      
-      
-    }
 
+  <div className={styles.menu}>
+    {searchBox}
     <div className={styles.imageContainer} onClick={()=>setShowSearch(!showSearch)}>
       <img src={search} alt="" className={styles.img}/>
     </div>
 
-{/*     <div className={styles.searchWrapper}>
-      <div className={styles.searchContainer}>
-        <input type="text" />
-      </div>
-    </div> */}
-
     <div className={styles.fullMenu}> 
-        <img src={fav} alt="" className={styles.img}/>
-        <img src={basket} alt="" className={styles.img}/>
-        <img src={avatar} alt="" className={styles.img}/>
-        <img src={other} alt="" className={styles.img}/>
+        <img src={fav} alt="" className={styles.icon}/>
+        <img src={basket} alt="" className={styles.icon}/>
+        <img src={avatar} alt="" className={styles.icon}/>
+        <img src={other} alt="" className={styles.icon}/>
     </div>
     <img src={menu} alt="" className={styles.mobMenu}/>
-
-</div>
+  </div>  
 
 
   )

@@ -6,16 +6,46 @@
     .fullMenu { 
         @include laptop{display: none;  }
     }
-    .img {
+    .icon {
         margin: 0px 16px 0px 16px;
         filter: var(--invert);
     }
 
     .mobMenu {
-        
         @include width-height(30px, 30px);
         display: none; 
         @include laptop{display: block; }
         filter: var(--invert);
+    }
+    
+    .searchContainer {
+        @include position-absolute($top: 0, $left: 0);
+        height: 200px;
+        background-color: white;
+        width: 100%;
+        padding-top: 24px;
+        //position: relative;
+        .close { 
+            position: absolute;
+            right: 37px;
+            top: 45px; 
+            cursor: pointer;
+        }
+
+        .searchBox { 
+            width: 640px;
+            margin: 0 auto;
+        
+            .inputLine {
+                border-radius: 8px;
+                border: 1px;
+                background: rgba(0, 0, 0, 0.06);
+                width: 100%;
+                height: 40px;
+                &:focus { 
+                    outline: none;
+                }
+            }
+        }
     }
 }
