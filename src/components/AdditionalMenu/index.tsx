@@ -22,7 +22,7 @@ const AdditionalMenu: React.FC = () => {
     <div className={styles.searchContainer}>
       <div className={styles.searchBox}>
         <div className={styles.inputFieldContainer}>
-          <input type="text" className={styles.inputField}/>
+          <input type="text" placeholder='Search among millions of products' className={styles.inputField}/>
           <img src={search} alt="" className={classNames(styles.icon, styles.search)}/>
         </div>
 
@@ -37,7 +37,6 @@ const AdditionalMenu: React.FC = () => {
             <h3 className={styles.text}>Overhit with belt</h3>
             <img src={close} alt="" className={classNames(styles.icon, styles.deleteButton)}/>
           </div>
-
         </div>
       </div>
       <div onClick={()=>setShowSearch(!showSearch)}> 

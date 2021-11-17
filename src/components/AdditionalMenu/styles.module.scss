@@ -20,20 +20,29 @@
     }
     
     .searchContainer {
+        background: var(--pageBackground);
+        width: 100%;
+       
+        z-index: 10;
+
         @include position-absolute($top: 0, $left: 0);
         height: 200px;
-        background-color: white;
-        width: 100%;
+        background-color: var(--searchBackground);
+
         padding-top: 24px;
 
         .close { 
             position: absolute;
             right: 37px;
             top: 45px; 
+           @include desktop{right: calc(-4px + (37 - (-4))* ((100vw - 320px) / (1440 - 320)));
+                            top: calc(11px + (45 - 11)* ((100vw - 320px) / (1440 - 320)))}
+             
         }   
 
     .searchBox { 
-        width: 640px;
+
+        @include desktop{width: calc(300px + (640 - 300)* ((100vw - 320px) / (1440 - 320)));}
         margin: 0 auto;
         .inputFieldContainer { 
             position: relative;
@@ -42,17 +51,20 @@
                 height: 100%;
                 border-radius: 8px;
                 border: 1px;
-                background: rgba(0, 0, 0, 0.06);
+                background: var(--themeSwitcherColor);
                 width: 100%;
                 padding-left: 50px;
+                font: 'DM Sans' !important;
+
+                font-size: 18px;
+                @include phones {font-size: 14px;}
+                @include tablets {font-size: 16px;}
                 &:focus { 
                     outline: none;
                 }
             }
             .search { 
-                position: absolute;
-                top: 18px;
-                left: 3px;
+                @include position-absolute($top: 18px, $left: 0px);
             }
         }
 
@@ -60,16 +72,16 @@
 
             margin-top: 30px;
             .title {
-                @include text-style(18px, $color: #1E1E22);
+                @include text-style(18px, $color: var(--productTextColor));
             }
 
             .historyItem { 
                 @include flex(center, space-between);
                 opacity: 0.6;
-                
+
                 .text { 
                     font-weight: normal;
-                    @include text-style(18px);
+                    @include text-style(18px, $color: var(--textColor2));
                 }
                 .deleteButton { 
                     width: 9px;

@@ -49,7 +49,7 @@ body,
 
   --backColor:  #FFFFFF;
   --backColor2: #F2F2F2;
-
+  --searchBackground: #FFFFFF;
 
   ::-webkit-scrollbar-thumb {
     background: $brandColor;
@@ -78,6 +78,8 @@ body.dark {
   --backColor:  #000000;
   --backColor2: #000000;
 
+  --searchBackground: #1E1E22;
+
   ::-webkit-scrollbar-thumb {
     background: #FFFFFF;
     border-radius: 60px;
@@ -105,7 +107,7 @@ body.light {
 
   --backColor:  #FFFFFF;
   --backColor2: #F2F2F2;
-
+  --searchBackground: #FFFFFF;
 
   ::-webkit-scrollbar-thumb {
     background: $brandColor;
