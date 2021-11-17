@@ -24,12 +24,9 @@
             font-weight: bold;
         }
         
-
         &::after {
             border-style: none !important;
         }
-        
-       
     }
 
     @include laptop{visibility: hidden};

@@ -14,7 +14,7 @@ interface Props {
 const SectionTitle: React.FC<Props> = observer(({title}) => {
   return (
     
-      <div className={styles.sectionTitle}>
+      <div className={styles.titleContainer}>
         <div className={styles.text}>
                 {title}
         </div>

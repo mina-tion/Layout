@@ -2,14 +2,11 @@
 
 
 .button {
-    
     @include flex(center, center);
-
     width: 100%;
     background: $brandColor;
     border-radius: 8px;
-    padding: 12px 24px 12px 24px;
-    
+    padding: 12px 24px 12px 24px; 
 }
 
 .text { 

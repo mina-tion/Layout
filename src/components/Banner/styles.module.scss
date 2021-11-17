@@ -2,7 +2,7 @@
 
 
 .banner { 
-    //margin: 242px 0 163px 60px;
+
     position: relative; 
     @include desktop{height: calc(500px + (772 - 500) * ((100vw - 320px)/(1200 - 320)));} 
 
@@ -60,30 +60,5 @@
             width: 93px;
         }
     }
-
  }
-
-
-
-/* 
-@media (max-width: 479px) {
-    .contentBlock { 
-        height: 4
-    }
-    .content{ 
-        @include position-absolute($left: 16px, $top: 39px);
-        
-        .caption { 
-            @include text-style(44px, 700, 44px, $color: #FFF, $letter-spacing:-2px);
-        }
-
-        .description { 
-            @include text-style(18px, $color: #FFF);
-            
-        }
-    }
-    
-}
-     */
-  
 

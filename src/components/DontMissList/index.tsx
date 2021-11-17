@@ -16,14 +16,6 @@ const DontMissList: React.FC = observer(() => {
 
   return (
     <div className={styles.list}>
-       {/*  {
-          categories.map((item, index) => (
-            <div key={index} className={styles.card}>
-              <CategoryCard img={offer} name={item}/>
-            </div>
-          ))
-        } */}
-
       <div key={0} className={styles.card}>
         <CategoryCard img={offer} name={'Special Offer'}/>
       </div>
@@ -33,8 +25,6 @@ const DontMissList: React.FC = observer(() => {
       <div key={2} className={styles.card}>
         <CategoryCard img={offer} name={'Special Offer'}/>
       </div>
-
-       
     </div>
 
   )

@@ -17,7 +17,6 @@ const CardCarousel: React.FC<Props> = observer(({img}) => {
         <img key={index} src={image} alt="" className={styles.img}/>
         )
   })
-
   return (
         <Carousel afterChange={()=>{}} className={styles.imageHolder}>
          { imgList }

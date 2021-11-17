@@ -43,8 +43,6 @@
         }   
     }
 
-
-
     .container { 
         @include flex();
         @include flex-direction(column);
@@ -77,8 +75,6 @@
         }
     }
 
-
-
     .iconContainer { 
         @include flex();
         flex-direction: column;
@@ -109,9 +105,7 @@
             @include phones { 
                  display: none;
              }
-        }
- 
-       
+        }     
     }
 }
 

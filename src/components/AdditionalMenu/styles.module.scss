@@ -5,7 +5,6 @@
     flex-wrap: nowrap;
     .fullMenu { 
         @include laptop{display: none;  }
-      /*   flex-wrap: nowrap; */
     }
     .img {
         margin: 0px 16px 0px 16px;

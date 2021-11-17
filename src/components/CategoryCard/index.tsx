@@ -15,9 +15,8 @@ const CategoryCard: React.FC<Props> = observer(({img,  name}) => {
   return (
     <div className={styles.card}>
       <img src={img} alt="" className={styles.img}/>
-      <div className={styles.info}>
+      <div className={styles.content}>
         <div className={styles.name}> {name} </div>
-
         <div className={styles.buttonContainer}>
           <Button />
         </div>

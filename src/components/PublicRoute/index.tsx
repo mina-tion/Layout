@@ -10,7 +10,7 @@ import MenuBar from '../MenuBar'
 import AdditionalMenu from '../AdditionalMenu'
 import Banner from './../Banner'
 import Slogan from './../Slogan'
-import OtherBlock from './../OtherBlock'
+import BottomBlock from '../BottomBlock'
 import ProductSection from 'components/ProductSection'
 import CreditsBlock from 'components/CreditsBlock'
 
@@ -50,7 +50,7 @@ const PublicRoute = ({ component: Component, restricted, ...rest }: any): any =>
               
               <Footer className={styles.footer}>
                 <CreditsBlock /> 
-                <OtherBlock />
+                <BottomBlock />
               </Footer >
               {/* <Component {...props} /> */}
             </Layout.Content>

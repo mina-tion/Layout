@@ -1,6 +1,6 @@
 @import './../../sources/styles/mixins.scss';
 
-.sectionTitle { 
+.titleContainer { 
     @include flex(flex-start, space-between);
     margin-bottom: 28px;
     margin-left: 1px;
