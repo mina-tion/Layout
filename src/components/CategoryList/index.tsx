@@ -25,7 +25,6 @@ const CategoryList: React.FC = observer(() => {
             <div className={styles.columnImg}>
               <CategoryCard img={men} name='Men' />
             </div>
-            
           </div>        
       </div>
 

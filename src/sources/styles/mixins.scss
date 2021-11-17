@@ -156,6 +156,7 @@ $desktop2KLgDOWN: (
        @content;
   }
 }
+
 @mixin laptop {
   @media screen and (max-width: 957px) {
       @content;
@@ -171,3 +172,4 @@ $desktop2KLgDOWN: (
       @content;
  }
 }
+

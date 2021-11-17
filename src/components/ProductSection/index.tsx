@@ -32,7 +32,6 @@ const ProductSection: React.FC<Props> = observer(({sectionName}) => {
       break;
 
   }
-
   return (
 
     <div className={styles.productSection}>

@@ -65,7 +65,7 @@
             @include laptop {@include flex; @include flex-direction(column);  flex-wrap: nowrap; }
            
             .column { 
-                //margin-right: 100px;
+                margin-right: 100px;
                 @include desktop{margin-right: calc(40px + (100 - 40) * ((100vw - 320px) / (1440 - 320)));}
 
                 .listItem { 
