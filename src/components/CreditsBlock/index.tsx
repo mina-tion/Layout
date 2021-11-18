@@ -68,7 +68,6 @@ const CreditsBlock: React.FC = observer(() => {
     </ul>
   )
 
-
   return (
   <div> 
     {
@@ -78,9 +77,10 @@ const CreditsBlock: React.FC = observer(() => {
           <div className={styles.brendName}>Stone<span className={styles.blue}>Tile</span></div>
           <ThemeSwitcher />
         </div>
-        <div className={styles.button}>
-          <Button />
+        <div className={styles.buttonContainer}>
+          <div className={styles.button}><Button /></div>
         </div>
+        
 
         <div className={styles.linksContainer}>
           <div className={styles.title}>

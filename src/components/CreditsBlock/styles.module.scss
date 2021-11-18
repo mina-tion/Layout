@@ -73,7 +73,7 @@
 
 
     .mob { 
-        @include phones{justify-content: flex-end;}
+        @include phones{justify-self: flex-end;}
     }
 
 
@@ -99,6 +99,9 @@
         margin-bottom: 50px;
     }
     
+    .buttonContainer { 
+        width: 50%;
+    }
     .button { 
         @include desktop { width: 93px;}
 

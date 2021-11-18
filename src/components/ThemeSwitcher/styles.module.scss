@@ -15,6 +15,7 @@
     transition-duration: 300ms;
     @include flex(center, space-around);
     flex-wrap: nowrap;
+    @include tablets { width: 82px !important;}
 
     &::after {
         content: "";
@@ -29,7 +30,6 @@
         z-index: 1;
       }
 
-      
       .lightThemeButton { 
         @include width-height(26px, 26px);
         z-index: 2;
