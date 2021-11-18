@@ -1,5 +1,6 @@
 
 import React from 'react'
+import { useEffect, useState } from 'react'
 import { observer } from 'mobx-react'
 // style
 import styles from './styles.module.scss'
@@ -9,74 +10,122 @@ import Button from 'components/Button'
 import linkedin from './../../sources/images/linkedin.svg'
 import facebook from './../../sources/images/facebook.svg'
 import instagram from './../../sources/images/instagram.svg'
+import classNames from 'classnames'
 
 /* import classnames from 'classnames' */
 
-const categoriesList = ['Popular', 'Kids', 'Sale', 'New', 'Men', 'Women']
-const aboutList = ['Contacts', 'Support']
-const iconList = [linkedin, facebook, instagram]
+const categoryArr = ['Popular', 'Kids', 'Sale', 'New', 'Men', 'Women']
+const aboutArr = ['Contacts', 'Support']
+const iconArr = [linkedin, facebook, instagram]
 
 
 const CreditsBlock: React.FC = observer(() => {
+  
+
+  const [width, setWidth] = useState(document.documentElement.clientWidth)
+
+  const onResize = () => {
+    setWidth(document.documentElement.clientWidth)
+  }
+  
+  useEffect(() => {
+    window.addEventListener("resize", onResize);
+    return () => {
+      window.removeEventListener("resize", onResize);
+    }
+  }, [])
+
+
+  
+  const categoryList = (
+    <div className={styles.listContainer}>
+      <ul className={styles.list}>
+        {
+          categoryArr.map((item, index) => (
+            <li key={index} className={styles.listItem}><a href="" className={styles.link}>{item}</a></li>
+          ))
+        }
+      </ul>
+    </div> )  
+
+  const iconList = (
+    <ul className={styles.iconList}>
+      {
+        iconArr.map((item, index) => (
+        <li key={index} className={styles.bgCircle}><a href="" className={styles.icon}> <img src={item} alt="" /></a></li>
+       ))
+      }
+   </ul>
+  )
+
+  const aboutList = (
+    <ul className={""}>
+      {
+        aboutArr.map((item, index) => (
+        <li key={index} className={styles.listItem}><a href="" className={styles.link}>{item}</a></li>
+        ))
+      }
+    </ul>
+  )
+
 
   return (
-    <div className={styles.creditsBlock}> 
-      <div className={styles.brend}>
-        <div className={styles.brendName}>
-          Stone<span className={styles.blue}>Tile</span>
+  <div> 
+    {
+      (width < 500) ?
+      <div className={styles.creditsBlock}>
+        <div className={styles.brend}>
+          <div className={styles.brendName}>Stone<span className={styles.blue}>Tile</span></div>
+          <ThemeSwitcher />
         </div>
-        <ThemeSwitcher />
-      </div>
-      <div className={styles.mobButtonContainer}>
+        <div className={styles.button}>
           <Button />
         </div>
 
-      <div className={styles.container}>
-        <div className={styles.title}>
-          Categories
+        <div className={styles.linksContainer}>
+          <div className={styles.title}>
+            Categories
+          </div>
+          {categoryList}
         </div>
 
-        <div className={styles.listContainer}>
-          <ul  className={styles.list}>
-              <li key={0}><a href="" className={styles.listItem}>{'Popular'}</a></li>
-              <li key={1}><a href="" className={styles.listItem}>{'Kids'}</a></li>
-              <li key={2}><a href="" className={styles.listItem}>{'Sale'}</a></li>
-              <li key={3}><a href="" className={styles.listItem}>{'New'}</a></li>
-              <li key={4}><a href="" className={styles.listItem}>{'Men'}</a></li>
-              <li key={5}><a href="" className={styles.listItem}>{'Women'}</a></li>
-          </ul>
-        </div>
-    
-      </div>
-
-      <div className={styles.container}>
+      <div className={classNames(styles.linksContainer, styles.mob)}>
         <div className={styles.title}>
           About Us
         </div>
         <div className={styles.listContainer}>
-          <ul className={""}>
-              <li key={0}><a href="" className={styles.listItem}>{'Contacts'}</a></li>
-              <li key={1}><a href="" className={styles.listItem}>{'Support'}</a></li>
+          {aboutList}
+          </div>{iconList}</div>
+      </div>
 
-          </ul>
+    : <div className={styles.creditsBlock}>
+      <div className={styles.brend}>
+        <div className={styles.brendName}>
+          Stone<span className={styles.blue}>Tile</span>
         </div>
+          <ThemeSwitcher />
+       </div>
+  
+      <div className={styles.linksContainer}>
+        <div className={styles.title}>
+          Categories
+        </div>
+        {categoryList}
+      </div>
+
+      <div className={styles.linksContainer}>
+        <div className={styles.title}>
+          About Us
+        </div>
+        <div className={styles.listContainer}>{aboutList}</div>
       </div>
 
       <div className={styles.iconContainer}>
-        <ul className={styles.list}>
-          {
-             iconList.map((item, index) => (
-              <li key={index} className={styles.bgCircle}><a href="" className={styles.icon}> <img src={item} alt="" /></a></li>
-            ))
-          }
-        </ul>
-
-        <div className={styles.deskButtonContainer}>
-          <Button />
-        </div>
-
+        {iconList}
+        <div className={styles.button}><Button /></div>
       </div>
-  
+    </div>
+    }
     </div>
 
   )

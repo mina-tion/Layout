@@ -6,10 +6,11 @@
     flex-wrap: wrap;
     width: 100%;
     padding: 42px 60px 48px 60px;
-    @include desktop{height: calc(468px + (226 - 468) * ((100vw - 320px) / (1440 - 320)));}
+    @include desktop{height: calc(468px + (226 - 468) * ((100vw - 375px) / (1440 - 375)));}
     @include desktop{padding-left: calc(16px + (60 - 16) * ((100vw - 320px) / (1440 - 320)));
                     padding-right: calc(16px + (60 - 16) * ((100vw - 320px) / (1440 - 320)));}
-    @include phones { align-content: flex-start}
+    @include phones { align-items: flex-start}
+    @include tablets { column-count: 2}
     background-color: var(--footerColor1);
     .brend { 
         @include flex(center);
@@ -22,17 +23,6 @@
          }
     }   
 
-    .mobButtonContainer { 
-        display: none;
-        width: 250px;
-        @include desktop { width: calc(157px + (250 - 157) * ((100vw - 375px) / (480 - 375)));}
-
-        @include phones { 
-            display: block;
-            margin-top: 50px;
-        }
-    }
-
     @media (max-width: 1048px) {
         .brend { 
             @include flex-direction(column);
@@ -43,12 +33,15 @@
         }   
     }
 
-    .container { 
+    .linksContainer { 
+
+        @include phones {
+            width: 50%
+        }
+
         @include flex();
         @include flex-direction(column);
-        @include phones {order: 2; height: 100px; margin-top: 55px;}
-
-        height: fit-content;
+        @include phones{ margin-top: 55px;}
 
         .title{ 
             @include text-style(24px, 400, $color: var(--titleColor));
@@ -56,56 +49,65 @@
         }
         
         .listContainer { 
+            margin: 0;
             @include flex-direction(column);
             @include flex(space-between, space-between);
-            height: 64px;
-            //@include laptop {@include flex; @include flex-direction(column);  flex-wrap: nowrap; }
-
             .list {
                 column-count: 3;
                 column-gap: 8em;
+                @include laptop {column-gap: 4em}
+                @include tablets {column-gap: 1em}
+                @include phones {column-count: 1}
             }
 
             .listItem { 
+                margin-bottom: 16px;
                 @include text-style(18px, 400, $color:var(--textColor2));
                 opacity: 0.6;
-                margin-top: 16px;
+                .link { 
+                    @include text-style(18px, 400, $color:var(--textColor2));
+                }
             }                       
         }
     }
 
-    .iconContainer { 
-        @include flex();
-        flex-direction: column;
-        align-items: center;
-        .list {     
-            width: 146px;
-            @include flex(space-between, space-between);
-            flex-wrap: wrap;
-        }
 
-        .bgCircle { 
-            @include width-height(38px, 38px);
-            background: rgba(60, 125, 255, 0.2);
-            border-radius: 50%;
-            @include flex(center, center);
-
-       }
-
-       @include phones { 
-            order: 2;
-            position: absolute;
-            right: 25px;
-            bottom: 12%;
-
-        }
-
-        .deskButtonContainer { 
-            @include phones { 
-                 display: none;
-             }
-        }     
+    .mob { 
+        @include phones{justify-content: flex-end;}
     }
+
+
+    .iconContainer { 
+        @include flex(flex-end, center);
+        flex-direction: column;
+        height: 100%;      
+       
+    }
+
+    .bgCircle { 
+        @include width-height(38px, 38px);
+        background: rgba(60, 125, 255, 0.2);
+        border-radius: 50%;
+        @include flex(center, center);
+    }
+    
+    .iconList {     
+        width: 146px;
+        display: flex;
+        @include flex(space-between, space-between);
+        //flex-wrap: wrap;
+        margin-bottom: 50px;
+    }
+    
+    .button { 
+        @include desktop { width: 93px;}
+
+        @include phones { 
+            width: 157px;
+            display: block;
+            margin-top: 50px;
+        }
+    }   
 }
 
 
