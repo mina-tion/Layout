@@ -9,17 +9,16 @@
 
   .content {
     flex: 1 1 auto;
-    max-width: 1440px;
+    //max-width: 1440px;
     width: 100%;
     flex: 1 !important; 
     display: flex;
     flex-direction: column;
     box-sizing: content-box;
 
+    @include desktop{max-width: 1440px;}
+
     @include laptop{max-width: 992px;}
-    @include laptop{max-width: 1000px;}
-    
-    
   }
 
   .header { 
