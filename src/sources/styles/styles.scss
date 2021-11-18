@@ -28,7 +28,6 @@ body,
 
 }
 
-
 :root{
   --contentBackground: #F5F5F5;
   --pageBackground: #FFFFFF;
@@ -86,34 +85,6 @@ body.dark {
   }
 }
 
-
-body.light { 
-  --contentBackground: #F5F5F5;
-  --pageBackground: #FFFFFF;
-
-  --textColor1: #FFFFFF;
-  --textColor2: #000000;
-
-  --menuText: rgba(0, 0, 0, 0.6);
-  --productTextColor:#1E1E22;
-  --sloganText: #000000;
-  --titleColor:  #1E1E22;
-  --arrowsColor: #000000;
-  --themeSwitcherColor: rgba(0, 0, 0, 0.06);
-  --sunButtonColor: #1E1E22;
-  --invert: none;
-  --footerColor1: #FFFFFF;
-  --footerColor2:  #F2F2F2;
-
-  --backColor:  #FFFFFF;
-  --backColor2: #F2F2F2;
-  --searchBackground: #FFFFFF;
-
-  ::-webkit-scrollbar-thumb {
-    background: $brandColor;
-    border-radius: 60px;
-  }
-}
 
 @font-face {
   font-family: 'DM Sans';

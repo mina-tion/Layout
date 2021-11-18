@@ -7,6 +7,9 @@
     background: $brandColor;
     border-radius: 8px;
     padding: 12px 24px 12px 24px; 
+    &:hover { 
+        cursor: pointer;
+    }
 }
 
 .text { 

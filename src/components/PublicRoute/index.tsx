@@ -17,6 +17,8 @@ import CreditsBlock from 'components/CreditsBlock'
 import newcollection from './../../sources/images/newcollection.jpg'
 import newintown from './../../sources/images/newintown.jpg'
 
+import classNames from 'classnames'
+
 const { Header, Footer,  Content } = Layout;
 
 const PublicRoute = ({ component: Component, restricted, ...rest }: any): any => {
@@ -35,7 +37,10 @@ const PublicRoute = ({ component: Component, restricted, ...rest }: any): any =>
                 <AdditionalMenu />
               </Header>
               <Content className={ `${styles.page}`}>
-                <Banner img={newcollection} caption={['New', 'collection']} description='Inspired by city explorers. Made to move. Built for tomorrow'/>
+                <div className={classNames(styles.banner, styles.topGradient)}>
+                  <Banner img={newcollection} caption={['New', 'collection']} description='Inspired by city explorers. Made to move. Built for tomorrow'/>
+                </div>
+                
                   <Slogan />  
                 
                 <div className={styles.productBlock}>
@@ -43,9 +48,11 @@ const PublicRoute = ({ component: Component, restricted, ...rest }: any): any =>
                   <ProductSection sectionName='Categories' />
                   <ProductSection sectionName={`Don't miss`} />
                 </div>
-              
-                <Banner img={newintown} caption={['New', 'in Town']} description='Made to move. Built for tomorrow'/>
-                  
+
+                <div className={classNames(styles.banner, styles.botGradient)}>
+                  <Banner img={newintown} caption={['New', 'in Town']} description='Made to move. Built for tomorrow'/>
+                </div>
+                                 
               </Content>
               
               <Footer className={styles.footer}>

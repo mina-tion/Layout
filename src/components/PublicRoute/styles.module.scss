@@ -57,5 +57,23 @@
     flex: 0 0 auto;
   }
 
- 
+  .banner{ 
+    position: relative;
+    &::after { 
+      content: '';
+      @include position-absolute(0, 0, 0, 0);
+      z-index: 2;
+      height: 100%;
+    }   
+  }
+  .botGradient { 
+    &::after { 
+      background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 70%);
+    }   
+  }
+  .topGradient { 
+    &::after {
+      background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 50%);
+    }
+  }
 } 

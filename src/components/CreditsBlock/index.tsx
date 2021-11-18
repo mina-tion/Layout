@@ -35,33 +35,31 @@ const CreditsBlock: React.FC = observer(() => {
         <div className={styles.title}>
           Categories
         </div>
-        <ul className={styles.list}>
-          <div className={styles.column}>
-            <li key={0}><a href="" className={styles.listItem}>{'Popular'}</a></li>
-            <li key={1}><a href="" className={styles.listItem}>{'Kids'}</a></li>
-          </div>
-          <div className={styles.column}>
-            <li key={2}><a href="" className={styles.listItem}>{'Sale'}</a></li>
-            <li key={3}><a href="" className={styles.listItem}>{'New'}</a></li>
-          </div>
-          <div className={styles.column}>
-            <li key={4}><a href="" className={styles.listItem}>{'Men'}</a></li>
-            <li key={5}><a href="" className={styles.listItem}>{'Women'}</a></li>
-          </div>
-        </ul>
+
+        <div className={styles.listContainer}>
+          <ul  className={styles.list}>
+              <li key={0}><a href="" className={styles.listItem}>{'Popular'}</a></li>
+              <li key={1}><a href="" className={styles.listItem}>{'Kids'}</a></li>
+              <li key={2}><a href="" className={styles.listItem}>{'Sale'}</a></li>
+              <li key={3}><a href="" className={styles.listItem}>{'New'}</a></li>
+              <li key={4}><a href="" className={styles.listItem}>{'Men'}</a></li>
+              <li key={5}><a href="" className={styles.listItem}>{'Women'}</a></li>
+          </ul>
+        </div>
+    
       </div>
 
       <div className={styles.container}>
         <div className={styles.title}>
           About Us
         </div>
-
-          <ul className={styles.list}>
-            <div className={styles.column}>
+        <div className={styles.listContainer}>
+          <ul className={""}>
               <li key={0}><a href="" className={styles.listItem}>{'Contacts'}</a></li>
               <li key={1}><a href="" className={styles.listItem}>{'Support'}</a></li>
-            </div>
+
           </ul>
+        </div>
       </div>
 
       <div className={styles.iconContainer}>

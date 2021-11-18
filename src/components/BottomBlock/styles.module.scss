@@ -18,10 +18,10 @@
             height: 20px;
         }
     }
-    .container { 
+    .links { 
         @include flex();
         .link {
-             margin-left: 37px; 
+            margin-left: 37px; 
         }
     }
 }
