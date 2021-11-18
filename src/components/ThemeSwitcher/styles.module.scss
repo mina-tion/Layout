@@ -15,7 +15,7 @@
     transition-duration: 300ms;
     @include flex(center, space-around);
     flex-wrap: nowrap;
-    @include tablets { width: 82px !important;}
+    @include tablets { min-width: 82px !important;}
 
     &::after {
         content: "";
