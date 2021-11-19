@@ -29,7 +29,7 @@
       @include desktop{padding: calc(16px + (60 - 16)* ((100vw - 320px) / (1440 - 320)));}
       
     }
-
+    
     .container { 
       background: var(--contentBackground); 
       position: relative;

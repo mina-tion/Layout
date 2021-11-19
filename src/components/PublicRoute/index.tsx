@@ -10,8 +10,8 @@ import styles from './styles.module.scss'
 import ThemeSwitcher from './../ThemeSwitcher'
 import MenuBar from '../MenuBar'
 import AdditionalMenu from '../AdditionalMenu'
-import BottomBlock from '../BottomBlock'
-import CreditsBlock from 'components/CreditsBlock'
+import BottomFooter from '../BottomFooter'
+import TopFooter from './../TopFooter'
 import HomePage from 'components/HomePage'
 
 const { Header, Footer,  Content } = Layout;
@@ -35,8 +35,8 @@ const PublicRoute = ({ component: Component, restricted, ...rest }: any): any =>
                 <HomePage />           
               </Content>
               <Footer className={styles.footer}>
-                <CreditsBlock /> 
-                <BottomBlock />
+                <TopFooter /> 
+                <BottomFooter />
               </Footer >
               {/* <Component {...props} /> */}
             </Layout.Content>
