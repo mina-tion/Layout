@@ -4,7 +4,7 @@ import { observer } from 'mobx-react'
 // style
 import styles from './styles.module.scss'
 
-import Arrows from './../Arrows'
+import SwitchArrows from '../SwitchArrows'
 
 
 interface Props {
@@ -15,11 +15,9 @@ const SectionTitle: React.FC<Props> = observer(({title}) => {
   return (
     
       <div className={styles.titleContainer}>
-        <div className={styles.text}>
-                {title}
-        </div>
+        <h1 className={styles.title}>{title}</h1>
         <div className={styles.arrows}>
-          <Arrows />
+          <SwitchArrows />
         </div>
     </div>
   )

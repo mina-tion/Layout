@@ -36,7 +36,7 @@ const PublicRoute = ({ component: Component, restricted, ...rest }: any): any =>
                 <MenuBar />
                 <AdditionalMenu />
               </Header>
-              <Content className={ `${styles.page}`}>
+              <Content className={ `${styles.container}`}>
                 <div className={classNames(styles.banner, styles.topGradient)}>
                   <Banner img={newcollection} caption={['New', 'collection']} description='Inspired by city explorers. Made to move. Built for tomorrow'/>
                 </div>
