@@ -19,12 +19,10 @@ const ProductImageHolder: React.FC<Props> = observer(({img, saleText}) => {
         <CardCarousel img={img} /> 
 
       <div className={styles.sale}>     
-        <div className={styles.saleText}>{saleText}</div>
+        <span className={styles.saleText}>{saleText}</span>
       </div>
 
-      <div className={styles.like}>     
-        <img src={like} alt="" />
-      </div>
+      <img src={like} alt="" className={styles.like} />
     </div>
 
   )

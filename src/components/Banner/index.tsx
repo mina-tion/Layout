@@ -1,8 +1,10 @@
 import React from 'react'
 import { observer } from 'mobx-react'
 
-// style
+//style
 import styles from './styles.module.scss'
+
+//components
 import Button from '../Button'
 
 
@@ -16,18 +18,12 @@ const Banner: React.FC<Props> = observer(({img, caption, description}) => {
 
   return (
       <div className={styles.banner} >
-        <div className={styles.backImage}>
-          <img src={img} alt='' className={styles.img} />  
-        </div>
+        <img src={img} alt='' className={styles.img} />  
 
-        <div  className={styles.content}>
-          <div className={styles.title}> {caption[0]} <br /> {caption[1]}</div>
-          <div className={styles.text}> {description} </div>
-
-          <div className={styles.buttonContainer}>
-           <Button />
-          </div>
-          
+        <div  className={styles.container}>
+          <h2 className={styles.title}> {caption[0]} <br /> {caption[1]}</h2>
+          <p className={styles.text}> {description} </p>
+          <div className={styles.buttonContainer}><Button /></div>
         </div>
       </div>
   )

@@ -3,6 +3,8 @@ import React from 'react'
 import { observer } from 'mobx-react'
 // style
 import styles from './styles.module.scss'
+
+//components
 import CategoryCard from './../CategoryCard'
 
 //images

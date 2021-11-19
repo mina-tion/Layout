@@ -1,9 +1,10 @@
 @import './../../sources/styles/mixins.scss';
 
-.menu { 
+.menuContainer { 
     @include flex(center, space-between);
     flex-wrap: nowrap;
-    .fullMenu { 
+
+    .deskMenuList { 
         @include laptop{display: none;  }
     }
     .icon {
@@ -11,7 +12,6 @@
         filter: var(--invert);
         cursor: pointer;
     }
-
     .mobMenu {
         @include width-height(30px, 30px);
         display: none; 

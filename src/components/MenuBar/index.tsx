@@ -1,9 +1,26 @@
 import React from 'react'
-// style
-import styles from './styles.module.scss'
 import { Menu } from 'antd';
 
+// style
+import styles from './styles.module.scss'
+
+
+
+const menuItems = [ {id: '1', name: 'Home'},
+                    {id: '2', name: 'New'},
+                    {id: '3', name: 'Men'},
+                    {id: '4', name: 'Women'},
+                    {id: '5', name: 'Kids'},
+                    {id: '6', name: 'Sale'},
+                    {id: '7', name: 'More'},
+]
+
+
 const MenuBar: React.FC = () => {
+
+  const menuList = menuItems.map((item)=>(
+    <Menu.Item key={item.id} className={styles.menuItem}>{item.name}</Menu.Item>
+  ))
 
   return (
 
@@ -13,15 +30,7 @@ const MenuBar: React.FC = () => {
       defaultSelectedKeys={['1']}
       defaultOpenKeys={['sub1']}
       mode="inline">
-
-        <Menu.Item key="1" className={styles.menuItem}>Home</Menu.Item>
-        <Menu.Item key="2" className={styles.menuItem}>New</Menu.Item>
-        <Menu.Item key="3" className={styles.menuItem}>Men</Menu.Item>
-        <Menu.Item key="4" className={styles.menuItem}>Women</Menu.Item>
-        <Menu.Item key="5" className={styles.menuItem}>Kids</Menu.Item>
-        <Menu.Item key="6" className={styles.menuItem}>Sale</Menu.Item>
-        <Menu.Item key="7" className={styles.menuItem}>More</Menu.Item>
-  
+       {menuList}
     </Menu>
   )
 }

@@ -1,13 +1,12 @@
 
 import React from 'react'
 import { observer } from 'mobx-react'
+
 // style
 import styles from './styles.module.scss'
 
+// components
 import SectionTitle from './../SectionTitle'
-
-//images
-
 import CategoryList from 'components/CategoryList'
 import ProductList from 'components/ProductList'
 import DontMissList from 'components/DontMissList'
@@ -30,14 +29,12 @@ const ProductSection: React.FC<Props> = observer(({sectionName}) => {
     case `Don't miss`: 
       list = <DontMissList/>
       break;
-
   }
   return (
-
-    <div className={styles.productSection}>
+    <section className={styles.productSection}>
       <SectionTitle title={sectionName} />
       {list}
-    </div>
+    </section>
   )
 })
 

@@ -1,15 +1,21 @@
 import React from 'react'
 import {useState} from 'react'
-// style
+//style
 import styles from './styles.module.scss'
 
+//components
+import Search from 'components/Search';
+
+//images
 import search from './../../sources/images/search.svg';
 import fav from './../../sources/images/fav.svg'
 import basket from './../../sources/images/basket.svg'
 import avatar from './../../sources/images/avatar.svg'
 import other from './../../sources/images/other.svg'
 import menu from './../../sources/images/menu.svg'
-import Search from 'components/Search';
+
+
+const icons = [fav, basket, avatar, other];
 
 const AdditionalMenu: React.FC = () => {
 
@@ -24,19 +30,19 @@ const AdditionalMenu: React.FC = () => {
     searchBox =  <Search handlerClick={onHandlerClick}/>
   }
 
+  const iconList = icons.map((icon)=>( 
+    <img src={icon} alt="" className={styles.icon}/>
+  ))
+
   return (
-      <div className={styles.menu}>
+      <div className={styles.menuContainer}>
         {searchBox}
         <div className={styles.imageContainer} onClick={onHandlerClick}>
           <img src={search} alt="" className={styles.icon}/>
         </div>
 
-        <div className={styles.fullMenu}> 
-            <img src={fav} alt="" className={styles.icon}/>
-            <img src={basket} alt="" className={styles.icon}/>
-            <img src={avatar} alt="" className={styles.icon}/>
-            <img src={other} alt="" className={styles.icon}/>
-        </div>
+        <div className={styles.deskMenuList}> {iconList} </div>
+
         <img src={menu} alt="" className={styles.mobMenu}/>
       </div>  
 

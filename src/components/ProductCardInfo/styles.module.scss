@@ -1,6 +1,6 @@
 @import './../../sources/styles/mixins.scss';
 
-.cardInfoBlock { 
+.cardInfoContainer { 
     margin-top: 20px;
     @include flex(flex-start, space-between);
 
@@ -16,7 +16,7 @@
 }
 
 
-.priceBlock {
+.priceContainer {
     .priceText { 
         @include text-style(24px, 700, $color: var(--productTextColor));
         @include flex(flex-end);

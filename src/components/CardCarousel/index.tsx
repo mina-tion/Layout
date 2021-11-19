@@ -1,10 +1,10 @@
 import React from 'react'
 import { observer } from 'mobx-react'
+import { Carousel } from 'antd';
 
 // style
 import styles from './styles.module.scss'
 
-import { Carousel } from 'antd';
 
 interface Props {
   img: string[],
@@ -18,7 +18,7 @@ const CardCarousel: React.FC<Props> = observer(({img}) => {
         )
   })
   return (
-        <Carousel afterChange={()=>{}} className={styles.imageHolder}>
+        <Carousel afterChange={()=>{}} className={styles.carousel}>
          { imgList }
         </Carousel>
   )

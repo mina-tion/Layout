@@ -3,6 +3,8 @@ import { observer } from 'mobx-react'
 
 // style
 import styles from './styles.module.scss'
+
+// components
 import ProductCardInfo from 'components/ProductCardInfo';
 import ProductImageHolder from 'components/ProductImageHolder';
 

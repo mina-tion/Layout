@@ -1,8 +1,9 @@
 
 import React from 'react'
 import { observer } from 'mobx-react'
-// style
+//style
 import styles from './styles.module.scss'
+//components
 import Button from '../Button'
 
 interface Props {
@@ -16,11 +17,8 @@ const CategoryCard: React.FC<Props> = observer(({img,  name}) => {
     <div className={styles.card}>
       <img src={img} alt="" className={styles.img}/>
       <div className={styles.content}>
-        <div className={styles.name}> {name} </div>
-        <div className={styles.buttonContainer}>
-          <Button />
-        </div>
-       
+        <h1 className={styles.name}> {name} </h1>
+        <div className={styles.buttonContainer}> <Button /></div>
       </div>
     </div>
 

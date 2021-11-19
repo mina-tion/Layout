@@ -15,15 +15,15 @@ const ProductCardInfo: React.FC<Props> = observer(({name, desc, price, oldPrice}
 
 
   return (
-    <div className={styles.cardInfoBlock} >
-      <div className={styles.info}>
-        <div className={styles.nameText}>{name}</div>
-        <div className={styles.descText}>{desc}</div>
+    <div className={styles.cardInfoContainer} >
+      <div>
+        <h4 className={styles.nameText}>{name}</h4>
+        <p className={styles.descText}>{desc}</p>
       </div>
 
-      <div className={styles.priceBlock}>
-        <div className={styles.priceText}>{price}</div>
-        <div className={styles.oldPriceText}>{oldPrice}</div>
+      <div className={styles.priceContainer}>
+        <h4 className={styles.priceText}>{price}</h4>
+        <p className={styles.oldPriceText}>{oldPrice}</p>
       </div>
     </div>
   )

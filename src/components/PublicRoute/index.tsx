@@ -1,23 +1,18 @@
-import styles from './styles.module.scss'
 import React from 'react'
 import { Layout } from 'antd'
 import { Route, Redirect } from 'react-router-dom'
 import { isLogin } from 'utils/login'
 
+//style
+import styles from './styles.module.scss'
 
+//components
 import ThemeSwitcher from './../ThemeSwitcher'
 import MenuBar from '../MenuBar'
 import AdditionalMenu from '../AdditionalMenu'
-import Banner from './../Banner'
-import Slogan from './../Slogan'
 import BottomBlock from '../BottomBlock'
-import ProductSection from 'components/ProductSection'
 import CreditsBlock from 'components/CreditsBlock'
-
-import newcollection from './../../sources/images/newcollection.jpg'
-import newintown from './../../sources/images/newintown.jpg'
-
-import classNames from 'classnames'
+import HomePage from 'components/HomePage'
 
 const { Header, Footer,  Content } = Layout;
 
@@ -37,24 +32,8 @@ const PublicRoute = ({ component: Component, restricted, ...rest }: any): any =>
                 <AdditionalMenu />
               </Header>
               <Content className={ `${styles.container}`}>
-                <div className={classNames(styles.banner, styles.topGradient)}>
-                  <Banner img={newcollection} caption={['New', 'collection']} description='Inspired by city explorers. Made to move. Built for tomorrow'/>
-                </div>
-                
-                  <Slogan />  
-                
-                <div className={styles.productBlock}>
-                  <ProductSection sectionName='Trending now' />
-                  <ProductSection sectionName='Categories' />
-                  <ProductSection sectionName={`Don't miss`} />
-                </div>
-
-                <div className={classNames(styles.banner, styles.botGradient)}>
-                  <Banner img={newintown} caption={['New', 'in Town']} description='Made to move. Built for tomorrow'/>
-                </div>
-                                 
+                <HomePage />           
               </Content>
-              
               <Footer className={styles.footer}>
                 <CreditsBlock /> 
                 <BottomBlock />

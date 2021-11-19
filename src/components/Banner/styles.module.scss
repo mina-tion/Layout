@@ -23,7 +23,7 @@
         width: 100%;
     }
 
-    .content { 
+    .container { 
         z-index: 3;
         width: 60%;
         @include position-absolute($bottom: 163px, $left:60px);

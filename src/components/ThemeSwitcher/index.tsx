@@ -1,10 +1,14 @@
 import React from 'react'
-// style
-import styles from './styles.module.scss'
-import moon from './../../sources/images/moon.svg'
-import sun from './../../sources/images/sun.svg'
+
 import store from './../../stores/theme';
 import { observer } from 'mobx-react';
+
+// style
+import styles from './styles.module.scss'
+
+// images
+import moon from './../../sources/images/moon.svg'
+import sun from './../../sources/images/sun.svg'
 
 const ThemeSwitcher: React.FC = observer(() => {
 

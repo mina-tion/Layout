@@ -9,69 +9,39 @@
 
   .content {
     flex: 1 1 auto;
-    //max-width: 1440px;
     width: 100%;
     flex: 1 !important; 
     display: flex;
     flex-direction: column;
     box-sizing: content-box;
-
-    //@include wideDesktop{//max-width: 1440px;}
     @include laptop{max-width: 992px;}
-  }
 
-  .header { 
-    background: var(--pageBackground);
-    @include position-absolute($top: 0, $left: 0);
-    width: 100%;
-   
-    z-index: 10;
-   
     
-    @include flex(center, space-between);
-    padding: 0 75px 0 60px;
-    min-height: 96px;
+    .header { 
+      @include position-absolute($top: 0, $left: 0);
+      @include flex(center, space-between);
+      width: 100%;
+      z-index: 10;
+      min-height: 96px;
+      background: var(--pageBackground);
 
-    @include desktop{padding: calc(16px + (60 - 16)* ((100vw - 320px) / (1440 - 320)));}
-    
-  }
+      padding: 0 75px 0 60px;
+      @include desktop{padding: calc(16px + (60 - 16)* ((100vw - 320px) / (1440 - 320)));}
+      
+    }
 
-  .page { 
-    background: var(--contentBackground); 
-    /* background: var(--contentBackground); */
-    position: relative;
-    z-index: 3;
-    
-    .productBlock {
+    .container { 
       background: var(--contentBackground); 
-      padding: 36px 60px 0 60px;
-      @include desktop{padding: calc(1px + (60 - 0)* ((100vw - 320px) / (1440 - 320)));}
+      position: relative;
+      z-index: 3;
     }
+
+    .footer {
+      padding: 0;
+      z-index: 10;
+      flex: 0 0 auto;
+    }
+
   }
 
-  .footer {
-    padding: 0;
-    z-index: 10;
-    flex: 0 0 auto;
-  }
-
-  .banner{ 
-    position: relative;
-    &::after { 
-      content: '';
-      @include position-absolute(0, 0, 0, 0);
-      z-index: 2;
-      height: 100%;
-    }   
-  }
-  .botGradient { 
-    &::after { 
-      background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 70%);
-    }   
-  }
-  .topGradient { 
-    &::after {
-      background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 50%);
-    }
-  }
-} 
+}
