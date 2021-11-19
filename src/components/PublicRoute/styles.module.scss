@@ -1,6 +1,8 @@
 @import './../../sources/styles/mixins.scss';
 
 .layout {   
+
+  //width: 100%;
   min-height: 100%;
   overflow: hidden;
   margin: 0 auto; 
@@ -29,8 +31,9 @@
       @include desktop{padding: calc(16px + (60 - 16)* ((100vw - 320px) / (1440 - 320)));}
       
     }
-    
+
     .container { 
+      //min-width: 100%;
       background: var(--contentBackground); 
       position: relative;
       z-index: 3;
