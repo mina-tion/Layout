@@ -5,7 +5,7 @@ import classNames from 'classnames';
 import styles from './styles.module.scss'
 
 // images
-import close from './../../sources/images/close.svg'
+import close from 'sources/images/close.svg'
 
 
 interface Props { 

@@ -7,7 +7,7 @@ import Main from '../Main'
 const PrivatePages: React.FC = observer(() => {
   return (
     <Switch>
-      <Route exact path="/" component={Main} />
+      <Route exact path="/main" component={Main} />
     </Switch>
   )
 })

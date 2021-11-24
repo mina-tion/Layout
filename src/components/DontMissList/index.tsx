@@ -8,8 +8,8 @@ import styles from './styles.module.scss'
 import CategoryCard from './../CategoryCard'
 
 //images
-import offer from './../../sources/images/offer.jpg'
-import unisex from './../../sources/images/unisex.jpg'
+import offer from 'sources/images/offer.jpg'
+import unisex from 'sources/images/unisex.jpg'
 
 const categories = [
   { id: 1,

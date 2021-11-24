@@ -4,8 +4,8 @@ import { observer } from 'mobx-react'
 import styles from './styles.module.scss'
 
 //images
-import arrowLeft from './../../sources/images/arrow-left.svg'
-import arrowRight from './../../sources/images/arrow-right.svg'
+import arrowLeft from 'sources/images/arrow-left.svg'
+import arrowRight from 'sources/images/arrow-right.svg'
 
 const SwitchArrows: React.FC = observer(() => {
 

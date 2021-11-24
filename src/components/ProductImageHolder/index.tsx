@@ -3,7 +3,7 @@ import { observer } from 'mobx-react'
 
 // style
 import styles from './styles.module.scss'
-import like from './../../sources/images/like.svg'
+import like from 'sources/images/like.svg'
 import CardCarousel from 'components/CardCarousel';
 
 interface Props {

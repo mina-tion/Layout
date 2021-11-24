@@ -19,9 +19,10 @@ const App = () => {
       <Provider {...store}>
         <Router history={history}>
           <Switch>
+            
             <PublicRoute restricted={true} component={SignIn} path="/login" exact />
             <PublicRoute restricted={true} component={SignUp} path="/register" exact />
-          <PrivateRoute component={PrivatePages} path="/" />
+            <PrivateRoute component={PrivatePages} path="/main" />
           </Switch>
         </Router>
       </Provider>

@@ -10,8 +10,8 @@ import Slogan from '../Slogan'
 import ProductSection from 'components/ProductSection'
 
 //images
-import newcollection from './../../sources/images/newcollection.jpg'
-import newintown from './../../sources/images/newintown.jpg'
+import newcollection from 'sources/images/newcollection.jpg'
+import newintown from 'sources/images/newintown.jpg'
 
 
 

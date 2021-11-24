@@ -3,8 +3,7 @@ import React from 'react'
 import styles from './styles.module.scss'
 import classNames from 'classnames';
 
-import search from './../../sources/images/search.svg';
-import close from './../../sources/images/close.svg'
+import search from 'sources/images/search.svg';
 
 interface Props { 
   handlerClick?: () => void;

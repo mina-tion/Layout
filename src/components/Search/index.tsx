@@ -3,8 +3,7 @@ import React from 'react'
 import styles from './styles.module.scss'
 import classNames from 'classnames';
 
-import search from './../../sources/images/search.svg';
-import close from './../../sources/images/close.svg'
+import close from 'sources/images/close.svg'
 
 import SearchField from './../SearchField'
 import SearchHistory from 'components/SearchHistory';

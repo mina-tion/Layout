@@ -3,9 +3,9 @@ import { observer } from 'mobx-react'
 
 // style
 import styles from './styles.module.scss'
-import photo1 from './../../sources/images/photo1.jpg'
-import photo2 from './../../sources/images/photo2.jpg'
-import photo3 from './../../sources/images/photo3.jpg'
+import photo1 from 'sources/images/photo1.jpg'
+import photo2 from 'sources/images/photo2.jpg'
+import photo3 from 'sources/images/photo3.jpg'
 
 import ProductCard from 'components/ProductCard'
 

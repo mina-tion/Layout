@@ -7,12 +7,11 @@ import { observer } from 'mobx-react'
 import styles from './styles.module.scss'
 
 
-import ThemeSwitcher from 'components/ThemeSwitcher'
 import Button from 'components/Button'
 import BrendComponent from './../BrendComponent'
-import linkedin from './../../sources/images/linkedin.svg'
-import facebook from './../../sources/images/facebook.svg'
-import instagram from './../../sources/images/instagram.svg'
+import linkedin from 'sources/images/linkedin.svg'
+import facebook from 'sources/images/facebook.svg'
+import instagram from 'sources/images/instagram.svg'
 import classNames from 'classnames'
 
 /* import classnames from 'classnames' */

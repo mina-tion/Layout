@@ -8,9 +8,9 @@ import styles from './styles.module.scss'
 import CategoryCard from './../CategoryCard'
 
 //images
-import women from './../../sources/images/women.jpg'
-import men from './../../sources/images/men.jpg'
-import kids from './../../sources/images/kids.jpg'
+import women from 'sources/images/women.jpg'
+import men from 'sources/images/men.jpg'
+import kids from 'sources/images/kids.jpg'
 
 const CategoryList: React.FC = observer(() => {
 
