@@ -1,9 +1,11 @@
 
 import React from 'react'
 import { observer } from 'mobx-react'
+import { EnvironmentOutlined } from '@ant-design/icons'
+
 // style
 import styles from './styles.module.scss'
-import { EnvironmentOutlined } from '@ant-design/icons'
+
 
 const BottomFooter: React.FC = observer(() => {
 

@@ -17,7 +17,7 @@ const ThemeSwitcher: React.FC = observer(() => {
   const { themeStore } = useStore()
 
   useEffect(() => {
-    themeStore.darkTheme ? document.body.classList.add('dark') : document.body.removeAttribute('class')
+    themeStore.darkTheme ? document.body.classList.add('dark') : document.body.classList.remove('dark')
   })
 
   return (

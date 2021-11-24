@@ -5,7 +5,7 @@ import { observer } from 'mobx-react'
 import styles from './styles.module.scss'
 
 //components
-import Button from '../Button'
+import Button from 'components/Button'
 
 
 interface Props {

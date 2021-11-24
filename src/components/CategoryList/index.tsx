@@ -5,7 +5,7 @@ import { observer } from 'mobx-react'
 import styles from './styles.module.scss'
 
 //components
-import CategoryCard from './../CategoryCard'
+import CategoryCard from 'components/CategoryCard'
 
 //images
 import women from 'sources/images/women.jpg'

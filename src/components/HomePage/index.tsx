@@ -5,8 +5,8 @@ import classNames from 'classnames'
 import styles from './styles.module.scss'
 
 //components
-import Banner from '../Banner'
-import Slogan from '../Slogan'
+import Banner from 'components/Banner'
+import Slogan from 'components/Slogan'
 import ProductSection from 'components/ProductSection'
 
 //images

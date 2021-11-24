@@ -8,18 +8,10 @@ import styles from './styles.module.scss'
 
 
 import Button from 'components/Button'
-import BrendComponent from './../BrendComponent'
-import linkedin from 'sources/images/linkedin.svg'
-import facebook from 'sources/images/facebook.svg'
-import instagram from 'sources/images/instagram.svg'
+import BrendComponent from 'components/BrendComponent'
 import classNames from 'classnames'
 
-/* import classnames from 'classnames' */
-
-const categoryArr = ['Popular', 'Kids', 'Sale', 'New', 'Men', 'Women']
-const aboutArr = ['Contacts', 'Support']
-const iconArr = [linkedin, facebook, instagram]
-
+import {categoryArr, aboutArr, iconArr} from 'utils/footerLists'
 
 const TopFooter: React.FC = observer(() => {
   

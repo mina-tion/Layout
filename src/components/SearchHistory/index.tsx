@@ -4,21 +4,18 @@ import React from 'react'
 import styles from './styles.module.scss'
 
 //components
-import SearchHistoryItem from './../SearchHistoryItem'
+import SearchHistoryItem from 'components/SearchHistoryItem'
 
-const historyItems = ['White Thirt', 'Overhit with belt']
+import { historyItems } from 'utils/searchHistory'
+
 
 const SearchHistory: React.FC = () => {
-
-  const historyList = historyItems.map((item)=>(
-    <SearchHistoryItem text={item}/>
-  ))
 
   return (
 
     <div className={styles.searchHistoryContainer}> 
       <h2 className={styles.title}><b>Resent Search</b></h2>
-      {historyList}
+      { historyItems.map((item)=>(<SearchHistoryItem text={item}/>)) }
     </div>
   )
 }

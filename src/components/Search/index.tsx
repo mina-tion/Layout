@@ -5,7 +5,7 @@ import classNames from 'classnames';
 
 import close from 'sources/images/close.svg'
 
-import SearchField from './../SearchField'
+import SearchField from 'components/SearchField'
 import SearchHistory from 'components/SearchHistory';
 
 interface Props { 
@@ -20,7 +20,7 @@ const Search: React.FC<Props> = ({handlerClick}) => {
         <SearchField />
         <SearchHistory />
       </div>
-      <img src={close} alt="" onClick={handlerClick} className={classNames(styles.icon, styles.close)}/>
+      <img src={close} alt='Close icon' onClick={handlerClick} className={classNames(styles.icon, styles.close)}/>
   </div>
   )
 }

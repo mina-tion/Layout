@@ -6,7 +6,7 @@ import { observer } from 'mobx-react'
 import styles from './styles.module.scss'
 
 // components
-import SectionTitle from './../SectionTitle'
+import SectionTitle from 'components/SectionTitle'
 import CategoryList from 'components/CategoryList'
 import ProductList from 'components/ProductList'
 import DontMissList from 'components/DontMissList'

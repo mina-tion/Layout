@@ -8,14 +8,10 @@ import Search from 'components/Search';
 
 //images
 import search from 'sources/images/search.svg';
-import fav from 'sources/images/fav.svg'
-import basket from 'sources/images/basket.svg'
-import avatar from 'sources/images/avatar.svg'
-import other from 'sources/images/other.svg'
 import menu from 'sources/images/menu.svg'
 
+import { icons } from 'utils/menuIcons'
 
-const icons = [fav, basket, avatar, other];
 
 const AdditionalMenu: React.FC = () => {
 
@@ -25,23 +21,22 @@ const AdditionalMenu: React.FC = () => {
     setShowSearch(!showSearch);
   }
 
-  let searchBox = null; 
-  if(showSearch) {
-    searchBox =  <Search handlerClick={onHandlerClick}/>
-  }
-
-  const iconList = icons.map((icon)=>( 
-    <img src={icon} alt='Мenu icon' className={styles.icon}/>
-  ))
+  
 
   return (
       <div className={styles.menuContainer}>
-        {searchBox}
+        { 
+          showSearch 
+          ? <Search handlerClick={onHandlerClick}/>
+          : null
+        }
         <div className={styles.imageContainer} onClick={onHandlerClick}>
           <img src={search} alt='Search icon' className={styles.icon}/>
         </div>
 
-        <div className={styles.deskMenuList}> {iconList} </div>
+        <div className={styles.deskMenuList}> 
+            {icons.map((icon)=>( <img src={icon} alt='Мenu icon' className={styles.icon}/>))} 
+        </div>
 
         <img src={menu} alt='Mobile menu icon' className={styles.mobMenu}/>
       </div>  

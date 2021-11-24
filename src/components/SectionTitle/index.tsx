@@ -5,7 +5,7 @@ import { observer } from 'mobx-react'
 import styles from './styles.module.scss'
 
 // components
-import SwitchArrows from '../SwitchArrows'
+import SwitchArrows from 'components/SwitchArrows'
 
 
 interface Props {

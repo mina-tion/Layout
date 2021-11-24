@@ -5,34 +5,19 @@ import { observer } from 'mobx-react'
 import styles from './styles.module.scss'
 
 //components
-import CategoryCard from './../CategoryCard'
+import CategoryCard from 'components/CategoryCard'
 
-//images
-import offer from 'sources/images/offer.jpg'
-import unisex from 'sources/images/unisex.jpg'
-
-const categories = [
-  { id: 1,
-    name: 'Special Offer',
-    img: offer, },
-  { id: 2,
-    name: 'Unisex',
-    img: unisex, },
-  { id: 3,
-    name: 'Special Offer',
-    img: offer, },
-]
-
+import { categories } from 'utils/categories'
 const DontMissList: React.FC = observer(() => {
 
-  const list = categories.map((item)=> (
-    <div key={item.id} className={styles.card}>
-        <CategoryCard img={item.img} name={item.name}/>
-    </div>
-  ))
 
   return (
-    <div className={styles.list}> {list} </div>
+    <div className={styles.list}> 
+      { categories.map((item)=> ( <div key={item.id} className={styles.card}>
+                                      <CategoryCard img={item.img} name={item.name}/>
+                                  </div>))
+      }                       
+    </div>
 
   )
 })

@@ -7,19 +7,14 @@ import styles from './styles.module.scss'
 
 
 interface Props {
-  img: string[],
+  images: string[],
 }
 
-const CardCarousel: React.FC<Props> = observer(({img}) => {
+const CardCarousel: React.FC<Props> = observer(({images}) => {
 
-  const imgList = img.map((image, index)=>{
-    return (
-        <img key={index} src={image} alt='Carousel item' className={styles.img}/>
-        )
-  })
   return (
         <Carousel afterChange={()=>{}} className={styles.carousel}>
-         { imgList }
+         { images.map((image, index)=> (<img key={index} src={image} alt='Carousel item' className={styles.img}/>)) }
         </Carousel>
   )
 })
