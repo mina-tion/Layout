@@ -1,6 +1,5 @@
 import React from 'react'
-
-import store from 'stores/theme';
+import { useEffect } from 'react';
 import { observer } from 'mobx-react';
 import { useStore } from 'stores'
 import classNames from 'classnames';
@@ -17,14 +16,12 @@ const ThemeSwitcher: React.FC = observer(() => {
 
   const { themeStore } = useStore()
 
-  console.log(themeStore.darkTheme)
-
-  document.body.removeAttribute('class');
-  if (store.darkTheme)
-    document.body.classList.add('dark')
+  useEffect(() => {
+    themeStore.darkTheme ? document.body.classList.add('dark') : document.body.removeAttribute('class')
+  })
 
   return (
-      <div className={classNames(styles.themeSwitcher, !store.darkTheme ? styles.switchOn : '')} onClick={()=>store.changeTheme()}>
+      <div className={classNames(styles.themeSwitcher, !themeStore.darkTheme ? styles.switchOn : '')} onClick={()=>themeStore.changeTheme()}>
         <img src={moon} alt='Dark theme icon' className={styles.darkThemeButton} /> 
         <img src={sun} alt='Light theme icon' className={styles.lightThemeButton} /> 
       </div>
