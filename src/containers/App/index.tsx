@@ -22,7 +22,7 @@ const App = () => {
             
             <PublicRoute restricted={true} component={SignIn} path="/login" exact />
             <PublicRoute restricted={true} component={SignUp} path="/register" exact />
-            <PrivateRoute component={PrivatePages} path="/main" />
+            <PrivateRoute component={PrivatePages} path="/" />
           </Switch>
         </Router>
       </Provider>
