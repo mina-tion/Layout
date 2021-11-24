@@ -14,7 +14,7 @@ const CardCarousel: React.FC<Props> = observer(({img}) => {
 
   const imgList = img.map((image, index)=>{
     return (
-        <img key={index} src={image} alt="" className={styles.img}/>
+        <img key={index} src={image} alt='Carousel item' className={styles.img}/>
         )
   })
   return (

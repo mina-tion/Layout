@@ -22,7 +22,7 @@ const ProductImageHolder: React.FC<Props> = observer(({img, saleText}) => {
         <span className={styles.saleText}>{saleText}</span>
       </div>
 
-      <img src={like} alt="" className={styles.like} />
+      <img src={like} alt='To favorite' className={styles.like} />
     </div>
 
   )

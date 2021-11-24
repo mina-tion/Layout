@@ -17,7 +17,7 @@ const SearchHistoryItem: React.FC<Props> = ({text}) => {
   return (
     <div className={styles.historyItem}>
       <h3 className={styles.text}>{text}</h3>
-      <img src={close} alt="" className={classNames(styles.icon, styles.deleteButton)}/>
+      <img src={close} alt='Close icon' className={classNames(styles.icon, styles.deleteButton)}/>
     </div>
   )
 }

@@ -31,19 +31,19 @@ const AdditionalMenu: React.FC = () => {
   }
 
   const iconList = icons.map((icon)=>( 
-    <img src={icon} alt="" className={styles.icon}/>
+    <img src={icon} alt='Мenu icon' className={styles.icon}/>
   ))
 
   return (
       <div className={styles.menuContainer}>
         {searchBox}
         <div className={styles.imageContainer} onClick={onHandlerClick}>
-          <img src={search} alt="" className={styles.icon}/>
+          <img src={search} alt='Search icon' className={styles.icon}/>
         </div>
 
         <div className={styles.deskMenuList}> {iconList} </div>
 
-        <img src={menu} alt="" className={styles.mobMenu}/>
+        <img src={menu} alt='Mobile menu icon' className={styles.mobMenu}/>
       </div>  
 
   )

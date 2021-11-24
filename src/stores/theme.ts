@@ -1,6 +1,4 @@
 import { observable, action, makeObservable } from 'mobx'
-import mobx from 'mobx'
-import { reaction } from 'mobx';
 import { autorun, set, toJS } from 'mobx'
 
 export function autoSave(_this: any, name: string) {
