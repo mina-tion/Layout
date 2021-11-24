@@ -2,13 +2,14 @@ import React, { Suspense } from 'react'
 import { Router, Switch } from 'react-router'
 import { Provider } from 'mobx-react'
 
+import store from 'stores'
+import history from 'utils/history'
+
 //components
 import SignIn from 'containers/Public/SignIn'
 import SignUp from 'containers/Public/SignUp'
-
 import PrivatePages from 'containers/Private/PageRoutes'
-import store from 'stores'
-import history from 'utils/history'
+
 import PublicRoute from 'components/PublicRoute'
 import PrivateRoute from 'components/PrivateRoute'
 

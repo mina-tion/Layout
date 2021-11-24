@@ -6,11 +6,12 @@ import { observer } from 'mobx-react'
 // style
 import styles from './styles.module.scss'
 
-
+// components
 import Button from 'components/Button'
 import BrendComponent from 'components/BrendComponent'
 import classNames from 'classnames'
 
+//utils
 import {categoryArr, aboutArr, iconArr} from 'utils/footerLists'
 
 const TopFooter: React.FC = observer(() => {

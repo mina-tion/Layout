@@ -6,6 +6,7 @@ import styles from './styles.module.scss'
 //components
 import SearchHistoryItem from 'components/SearchHistoryItem'
 
+//utils
 import { historyItems } from 'utils/searchHistory'
 
 

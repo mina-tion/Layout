@@ -1,12 +1,16 @@
 import React from 'react'
-// style
-import styles from './styles.module.scss'
 import classNames from 'classnames';
 
-import close from 'sources/images/close.svg'
+// style
+import styles from './styles.module.scss'
 
+// components
 import SearchField from 'components/SearchField'
 import SearchHistory from 'components/SearchHistory';
+
+// images
+import close from 'sources/images/close.svg'
+
 
 interface Props { 
   handlerClick?: () => void;

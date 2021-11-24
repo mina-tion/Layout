@@ -7,7 +7,10 @@ import styles from './styles.module.scss'
 //components
 import CategoryCard from 'components/CategoryCard'
 
+// utils
 import { categories } from 'utils/categories'
+
+
 const DontMissList: React.FC = observer(() => {
 
 

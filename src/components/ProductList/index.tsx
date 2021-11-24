@@ -3,11 +3,15 @@ import { observer } from 'mobx-react'
 
 // style
 import styles from './styles.module.scss'
+
+// components
+import ProductCard from 'components/ProductCard'
+
+// images
 import photo1 from 'sources/images/photo1.jpg'
 import photo2 from 'sources/images/photo2.jpg'
 import photo3 from 'sources/images/photo3.jpg'
 
-import ProductCard from 'components/ProductCard'
 
 const ProductList: React.FC = observer(() => {
 

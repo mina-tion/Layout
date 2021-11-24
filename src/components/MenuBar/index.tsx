@@ -1,10 +1,11 @@
 import React from 'react'
 import { Menu } from 'antd';
 
-import { menuItems } from 'utils/menuList';
-
 // style
 import styles from './styles.module.scss'
+
+// utils
+import { menuItems } from 'utils/menuList';
 
 
 const MenuBar: React.FC = () => {

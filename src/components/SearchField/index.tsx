@@ -1,8 +1,9 @@
 import React from 'react'
+import classNames from 'classnames';
 // style
 import styles from './styles.module.scss'
-import classNames from 'classnames';
 
+// style
 import search from 'sources/images/search.svg';
 
 interface Props { 

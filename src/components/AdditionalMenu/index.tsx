@@ -1,15 +1,16 @@
 import React from 'react'
 import {useState} from 'react'
-//style
+// style
 import styles from './styles.module.scss'
 
-//components
+// components
 import Search from 'components/Search';
 
-//images
+// images
 import search from 'sources/images/search.svg';
 import menu from 'sources/images/menu.svg'
 
+// utils
 import { icons } from 'utils/menuIcons'
 
 
@@ -21,7 +22,7 @@ const AdditionalMenu: React.FC = () => {
     setShowSearch(!showSearch);
   }
 
-  
+
 
   return (
       <div className={styles.menuContainer}>
