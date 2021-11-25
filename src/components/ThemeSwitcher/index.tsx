@@ -4,7 +4,6 @@ import { observer } from 'mobx-react';
 import { useStore } from 'stores'
 import classNames from 'classnames';
 
-
 // style
 import styles from './styles.module.scss'
 
