@@ -22,8 +22,6 @@ const AdditionalMenu: React.FC = () => {
     setShowSearch(!showSearch);
   }
 
-
-
   return (
       <div className={styles.menuContainer}>
         { 
