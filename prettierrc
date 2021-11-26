@@ -7,6 +7,5 @@
   "arrowParens": "avoid",
   "semi": false,
   "printWidth": 100,
-  "endOfLine": "auto",
-  "prettier.cssEnable": ["css", "less", "scss"]
+  "endOfLine": "auto"
 }
