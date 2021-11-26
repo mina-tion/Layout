@@ -17,22 +17,27 @@ body,
   @include position-absolute-center;
   background: #303030;
 
-  @include wideDesktop{ max-width: 1920px;};
+  @include wideDesktop {
+    max-width: 1920px;
+  }
+
+  ;
 
   //@include desktop{ width: 1440px;}
 
-  ul, ol {
-    list-style: none; 
+  ul,
+  ol {
+    list-style: none;
     padding: 0;
   }
 
   a {
-   text-decoration: none;
-}
+    text-decoration: none;
+  }
 
 }
 
-:root{
+:root {
   --contentBackground: #F5F5F5;
   --pageBackground: #FFFFFF;
 
@@ -40,17 +45,17 @@ body,
   --textColor2: #000000;
 
   --menuText: rgba(0, 0, 0, 0.6);
-  --productTextColor:#1E1E22;
+  --productTextColor: #1E1E22;
   --sloganText: #000000;
-  --titleColor:  #1E1E22;
+  --titleColor: #1E1E22;
   --arrowsColor: #000000;
   --themeSwitcherColor: rgba(0, 0, 0, 0.06);
   --sunButtonColor: #1E1E22;
   --invert: none;
   --footerColor1: #FFFFFF;
-  --footerColor2:  #F2F2F2;
+  --footerColor2: #F2F2F2;
 
-  --backColor:  #FFFFFF;
+  --backColor: #FFFFFF;
   --backColor2: #F2F2F2;
   --searchBackground: #FFFFFF;
 
@@ -61,24 +66,24 @@ body,
 }
 
 
-body.dark { 
+body.dark {
   --contentBackground: #303034;
   --pageBackground: rgba(14, 13, 13, 0);
 
   --textColor1: #FFFFFF;
   --textColor2: #FFFFFF;
   --menuText: rgba(255, 255, 255, 0.6);
-  
+
   --invert: invert(1);
 
-  --productTextColor:#FFFFFF;
+  --productTextColor: #FFFFFF;
   --arrowsColor: invert(1);
 
-  --themeSwitcherColor:  rgba(255, 255, 255, 0.06);
+  --themeSwitcherColor: rgba(255, 255, 255, 0.06);
   --titleColor: #FFFFFF;
 
   --footerColor1: #0A0A0E;
-  --backColor:  #000000;
+  --backColor: #000000;
   --backColor2: #000000;
 
   --searchBackground: #1E1E22;

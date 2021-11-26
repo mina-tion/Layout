@@ -1,14 +1,15 @@
 @import './../../sources/styles/mixins.scss';
 
-.historyItem { 
+.historyItem {
     @include flex(center, space-between);
     opacity: 0.6;
 
-    .text { 
+    .text {
         font-weight: normal;
         @include text-style(18px, $color: var(--textColor2));
     }
-    .deleteButton { 
+
+    .deleteButton {
         width: 9px;
         height: 9px;
     }

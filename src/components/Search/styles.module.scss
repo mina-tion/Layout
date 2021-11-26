@@ -1,33 +1,39 @@
 @import './../../sources/styles/mixins.scss';
 
 .searchContainer {
-        background: var(--pageBackground);
-        width: 100%;
-       
-        z-index: 10;
+    background: var(--pageBackground);
+    width: 100%;
 
-        @include position-absolute($top: 0, $left: 0);
-        height: 200px;
-        background-color: var(--searchBackground);
+    z-index: 10;
 
-        padding-top: 24px;
+    @include position-absolute($top: 0, $left: 0);
+    height: 200px;
+    background-color: var(--searchBackground);
 
-        .close { 
-            position: absolute;
-            right: 37px;
-            top: 45px; 
-             @include desktop{right: calc(10px + (37 - (10))* ((100vw - 320px) / (1440 - 320)));
-                            top: calc(11px + (45 - 11)* ((100vw - 320px) / (1440 - 320)))}
-            filter: var(--invert);
-             
-        }   
+    padding-top: 24px;
 
-    .searchBox { 
+    .close {
+        position: absolute;
+        right: 37px;
+        top: 45px;
 
-        @include wideDesktop{width: calc(300px + (640 - 300)* ((100vw - 320px) / (1440 - 320)));}
-           
+        @include desktop {
+            right: calc(10px + (37 - (10))* ((100vw - 320px) / (1440 - 320)));
+            top: calc(11px + (45 - 11)* ((100vw - 320px) / (1440 - 320)))
+        }
+
+        filter: var(--invert);
+
+    }
+
+    .searchBox {
+
+        @include wideDesktop {
+            width: calc(300px + (640 - 300)* ((100vw - 320px) / (1440 - 320)));
+        }
+
         margin: 0 auto;
-       
+
     }
 }
 

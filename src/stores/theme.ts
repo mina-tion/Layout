@@ -1,35 +1,33 @@
-import { observable, action, makeObservable } from 'mobx'
-import { autorun, set, toJS } from 'mobx'
+import { observable, action, makeObservable } from 'mobx';
+import { autorun, set, toJS } from 'mobx';
 
 export function autoSave(_this: any, name: string) {
-	const storedJson = localStorage.getItem(name)
+	const storedJson = localStorage.getItem(name);
 	if (storedJson) {
-		set(_this, JSON.parse(storedJson))
+		set(_this, JSON.parse(storedJson));
 	}
 	autorun(() => {
-		const value = toJS(_this)
-		localStorage.setItem(name, JSON.stringify(value))
-	})
+		const value = toJS(_this);
+		localStorage.setItem(name, JSON.stringify(value));
+	});
 }
 
 class Store {
+	public accessToken: string;
 
-  public accessToken: string
+	constructor() {
+		makeObservable(this);
+		this.accessToken = '';
+		autoSave(this, 'store');
+	}
 
-  constructor() {
-    makeObservable(this);
-    this.accessToken = '' 
-		autoSave(this, 'store')
-  }
+	@observable darkTheme: boolean = false;
 
-  @observable darkTheme: boolean = false
-
-  @action
-  changeTheme() {
-    this.darkTheme = !this.darkTheme;
-    console.log('dark theme is ', this.darkTheme)
-  }  
+	@action
+	changeTheme() {
+		this.darkTheme = !this.darkTheme;
+		console.log('dark theme is ', this.darkTheme);
+	}
 }
 
-
-export default new Store()
+export default new Store();

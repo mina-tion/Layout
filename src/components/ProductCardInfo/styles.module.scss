@@ -1,15 +1,15 @@
 @import './../../sources/styles/mixins.scss';
 
-.cardInfoContainer { 
+.cardInfoContainer {
     margin-top: 20px;
     @include flex(flex-start, space-between);
 
-    .nameText { 
+    .nameText {
         @include text-style(24px, $color: var(--productTextColor));
         @include flex(flex-end);
     }
-    
-    .descText { 
+
+    .descText {
         @include text-style(18px, $color: var(--productTextColor));
         opacity: 0.6;
     }
@@ -17,16 +17,15 @@
 
 
 .priceContainer {
-    .priceText { 
+    .priceText {
         @include text-style(24px, 700, $color: var(--productTextColor));
         @include flex(flex-end);
     }
 
-    .oldPriceText { 
+    .oldPriceText {
         text-decoration: line-through;
         @include text-style(18px, $color: var(--productTextColor));
-        @include flex(flex-end); 
+        @include flex(flex-end);
         opacity: 0.6;
     }
 }
-

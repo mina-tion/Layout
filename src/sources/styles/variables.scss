@@ -1,6 +1,7 @@
 //Fonts
 $font1: 'DM Sans';
-$defaultFont: 'DM Sans', sans-serif;
+$defaultFont: 'DM Sans',
+sans-serif;
 
 // Sizes
 $defaultFontSize: 14px;
@@ -20,7 +21,7 @@ $background2: #12986F0D;
 $minWidth: 320px;
 $maxWidth: 1440;
 $maxWidthContainer: 1320;
-$md1: $maxWidthContainer + 12;
+$md1: $maxWidthContainer+12;
 $md2: 991.98;
 $md3: 767.98;
 $md4: 479.98;

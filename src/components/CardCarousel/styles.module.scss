@@ -3,9 +3,14 @@
 
 .carousel {
     height: 100%;
-    .img {
-        @include desktop{height: calc(333px + (475 - 333) * ((100vw - 320px)/(1200 - 320)));} 
-        @include desktop{width: calc(300px + (427 - 300) * ((100vw - 320px)/(1200 - 320)));} 
-     }
-}
 
+    .img {
+        @include desktop {
+            height: calc(333px + (475 - 333) * ((100vw - 320px)/(1200 - 320)));
+        }
+
+        @include desktop {
+            width: calc(300px + (427 - 300) * ((100vw - 320px)/(1200 - 320)));
+        }
+    }
+}

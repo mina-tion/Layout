@@ -1,9 +1,9 @@
 @import './../../sources/styles/mixins.scss';
 
-.list { 
+.list {
     @include flex;
     overflow-x: scroll;
     overflow-y: hidden;
     width: 100%;
-    
-}   
+
+}

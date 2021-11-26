@@ -1,22 +1,25 @@
 @import './../../sources/styles/mixins.scss';
 
-.brend { 
+.brend {
     @include flex(center);
-    .brendName { 
+
+    .brendName {
         margin-right: 12px;
         @include text-style(24px, $color: var(--textColor2));
-        .blue { 
+
+        .blue {
             color: $brandColor;
         }
-     }
-}   
+    }
+}
 
 @media (max-width: 1048px) {
-    .brend { 
+    .brend {
         @include flex-direction(column);
         @include flex(flex-start);
-        .brendName { 
+
+        .brendName {
             margin-bottom: 32px;
         }
-    }   
+    }
 }

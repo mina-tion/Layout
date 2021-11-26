@@ -9,31 +9,38 @@
     .menuItem {
         background: none !important;
         width: fit-content !important;
-        padding: 0 !important; 
-        
+        padding: 0 !important;
+
         margin: 0px 16px 0px 16px !important;
-    
+
         @include text-style(18px, 400, 24px, $color: var(--menuText) !important);
-       
+
         &:hover {
-            color:var(--textColor2) !important;;  
+            color: var(--textColor2) !important;
+            ;
         }
-    
-        &:visited, &:focus, &:active {
+
+        &:visited,
+        &:focus,
+        &:active {
             color: var(--textColor2) !important;
             font-weight: bold;
         }
-        
+
         &::after {
             border-style: none !important;
         }
     }
 
-    @include laptop{visibility: hidden};
+    @include laptop {
+        visibility: hidden
+    }
+
+    ;
 
     @media (max-width: 479px) {
 
-        .menuItem { 
+        .menuItem {
             @include text-style(10px);
             margin: 0px 5px 0px 5px !important;
             max-height: 20px;

@@ -1,8 +1,9 @@
 @import './../../sources/styles/mixins.scss';
 
-.productSection { 
+.productSection {
     margin-bottom: 100px;
-    @include desktop{margin-bottom: calc(48px + (100 - 48) * ((100vw - 320px) / (1440 - 320)));  } 
+
+    @include desktop {
+        margin-bottom: calc(48px + (100 - 48) * ((100vw - 320px) / (1440 - 320)));
+    }
 }
-
-

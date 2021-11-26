@@ -1,36 +1,32 @@
-import React from 'react'
-import { observer } from 'mobx-react'
+import React from 'react';
+import { observer } from 'mobx-react';
 
 // style
-import styles from './styles.module.scss'
+import styles from './styles.module.scss';
 
 // components
 import CardCarousel from 'components/CardCarousel';
 
 // images
-import like from 'sources/images/like.svg'
-
+import like from 'sources/images/like.svg';
 
 interface Props {
-  img: string[],
-  saleText: string,
+	img: string[];
+	saleText: string;
 }
 
-const ProductImageHolder: React.FC<Props> = observer(({img, saleText}) => {
+const ProductImageHolder: React.FC<Props> = observer(({ img, saleText }) => {
+	return (
+		<div className={styles.imageHolder}>
+			<CardCarousel images={img} />
 
-  return (
+			<div className={styles.sale}>
+				<span className={styles.saleText}>{saleText}</span>
+			</div>
 
-    <div className={styles.imageHolder}> 
-        <CardCarousel images={img} /> 
+			<img src={like} alt='To favorite' className={styles.like} />
+		</div>
+	);
+});
 
-      <div className={styles.sale}>     
-        <span className={styles.saleText}>{saleText}</span>
-      </div>
-
-      <img src={like} alt='To favorite' className={styles.like} />
-    </div>
-
-  )
-})
-
-export default ProductImageHolder
+export default ProductImageHolder;

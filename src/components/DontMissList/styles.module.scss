@@ -1,21 +1,21 @@
 @import './../../sources/styles/mixins.scss';
 
-
-.list { 
+.list {
     @include flex;
+
     @include tablets {
         @include flex-direction(column);
-        flex-wrap: wrap; 
+        flex-wrap: wrap;
         margin: 0 auto;
     }
-    
+
     overflow-x: scroll;
-    overflow-y: hidden; 
+    overflow-y: hidden;
     width: 100%;
-   
+
     .card {
-        @include tablets{width: 100%}
+        @include tablets {
+            width: 100%
+        }
     }
 }
-
-

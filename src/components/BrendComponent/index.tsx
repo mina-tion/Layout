@@ -1,21 +1,20 @@
-import React from 'react'
-import { observer } from 'mobx-react'
+import React from 'react';
+import { observer } from 'mobx-react';
 // style
-import styles from './styles.module.scss'
+import styles from './styles.module.scss';
 
 // components
-import ThemeSwitcher from 'components/ThemeSwitcher'
-
+import ThemeSwitcher from 'components/ThemeSwitcher';
 
 const BrendComponent: React.FC = observer(() => {
+	return (
+		<div className={styles.brend}>
+			<div className={styles.brendName}>
+				Stone<span className={styles.blue}>Tile</span>
+			</div>
+			<ThemeSwitcher />
+		</div>
+	);
+});
 
-  return (
-
-  <div className={styles.brend}>
-    <div className={styles.brendName}>Stone<span className={styles.blue}>Tile</span></div>
-    <ThemeSwitcher />
-  </div>
-)
-})
-
-export default BrendComponent
+export default BrendComponent;

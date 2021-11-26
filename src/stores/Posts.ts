@@ -1,16 +1,16 @@
-import { observable, action, makeObservable } from 'mobx'
+import { observable, action, makeObservable } from 'mobx';
 
 class Store {
-  constructor() {
-    makeObservable(this)
-  }
+	constructor() {
+		makeObservable(this);
+	}
 
-  @observable foo: string = 'TEST LOGIN'
+	@observable foo: string = 'TEST LOGIN';
 
-  @action
-  getFoo() {
-    return this.foo
-  }
+	@action
+	getFoo() {
+		return this.foo;
+	}
 }
 
-export default new Store()
+export default new Store();
