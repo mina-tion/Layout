@@ -12,10 +12,10 @@ import SearchHistory from 'components/SearchHistory';
 import close from 'sources/images/close.svg';
 
 interface Props {
-	handlerClick?: () => void;
+	handlerOnClick?: () => void;
 }
 
-const Search: React.FC<Props> = ({ handlerClick }) => {
+const Search: React.FC<Props> = ({ handlerOnClick }) => {
 	return (
 		<div className={styles.searchContainer}>
 			<div className={styles.searchBox}>
@@ -25,7 +25,7 @@ const Search: React.FC<Props> = ({ handlerClick }) => {
 			<img
 				src={close}
 				alt='Close icon'
-				onClick={handlerClick}
+				onClick={handlerOnClick}
 				className={classNames(styles.icon, styles.close)}
 			/>
 		</div>

@@ -16,14 +16,14 @@ import { icons } from 'utils/menuIcons';
 const AdditionalMenu: React.FC = () => {
 	const [showSearch, setShowSearch] = useState(false);
 
-	const onHandlerClick = () => {
+	const handlerOnClick = () => {
 		setShowSearch(!showSearch);
 	};
 
 	return (
 		<div className={styles.menuContainer}>
-			{showSearch ? <Search handlerClick={onHandlerClick} /> : null}
-			<div className={styles.imageContainer} onClick={onHandlerClick}>
+			{showSearch ? <Search handlerClick={handlerOnClick} /> : null}
+			<div className={styles.imageContainer} onClick={handlerOnClick}>
 				<img src={search} alt='Search icon' className={styles.icon} />
 			</div>
 
