@@ -22,7 +22,7 @@ const AdditionalMenu: React.FC = () => {
 
 	return (
 		<div className={styles.menuContainer}>
-			{showSearch ? <Search handlerClick={handlerOnClick} /> : null}
+			{showSearch && <Search handlerOnClick={handlerOnClick} />}
 			<div className={styles.imageContainer} onClick={handlerOnClick}>
 				<img src={search} alt='Search icon' className={styles.icon} />
 			</div>

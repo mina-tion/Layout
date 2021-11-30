@@ -21,7 +21,7 @@ const Main: React.FC = observer(() => {
 					<MenuBar />
 					<AdditionalMenu />
 				</header>
-				<main className={`${styles.container}`}>
+				<main className={styles.container}>
 					<HomePage />
 				</main>
 				<footer className={styles.footer}>
